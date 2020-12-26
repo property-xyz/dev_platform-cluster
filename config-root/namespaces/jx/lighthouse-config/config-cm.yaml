@@ -10,6 +10,7 @@ data:
         property-xyz/dev_platform-cluster: true
         property-xyz/prod_platform-cluster: true
         property-xyz/stage_platform-cluster: true
+        property-xyz/test-jx3-spring: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -24,6 +25,7 @@ data:
         property-xyz/dev_platform-cluster: merge
         property-xyz/prod_platform-cluster: merge
         property-xyz/stage_platform-cluster: merge
+        property-xyz/test-jx3-spring: merge
       queries:
       - labels:
         - approved
@@ -37,6 +39,7 @@ data:
         - property-xyz/dev_platform-cluster
         - property-xyz/prod_platform-cluster
         - property-xyz/stage_platform-cluster
+        - property-xyz/test-jx3-spring
       - labels:
         - updatebot
         missingLabels:
@@ -49,6 +52,7 @@ data:
         - property-xyz/dev_platform-cluster
         - property-xyz/prod_platform-cluster
         - property-xyz/stage_platform-cluster
+        - property-xyz/test-jx3-spring
       target_url: http://dashboard.dev.property.xyz
 kind: ConfigMap
 metadata:
