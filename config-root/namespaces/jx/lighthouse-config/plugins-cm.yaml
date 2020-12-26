@@ -16,6 +16,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - property-xyz/platform-backend
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - property-xyz/platform-postcodes-db
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -42,6 +46,22 @@ data:
     plugins:
       property-xyz/dev_platform-cluster:
       - config-updater
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      property-xyz/platform-backend:
       - approve
       - assign
       - blunderbuss
@@ -122,6 +142,9 @@ data:
       trusted_org: todo
     - repos:
       - property-xyz/stage_platform-cluster
+      trusted_org: todo
+    - repos:
+      - property-xyz/platform-backend
       trusted_org: todo
     - repos:
       - property-xyz/platform-postcodes-db
