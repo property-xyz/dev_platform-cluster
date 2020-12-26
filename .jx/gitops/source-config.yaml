@@ -1,0 +1,12 @@
+apiVersion: gitops.jenkins-x.io/v1alpha1
+kind: SourceConfig
+metadata:
+  creationTimestamp: null
+spec:
+  groups:
+  - owner: property-xyz
+    provider: https://github.com
+    providerKind: github
+    repositories:
+    - name: stage_platform-cluster
+    scheduler: in-repo
