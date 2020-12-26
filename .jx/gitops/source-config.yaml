@@ -10,6 +10,7 @@ spec:
     repositories:
     - name: prod_platform-cluster
     - name: stage_platform-cluster
+    - name: tes-jx3-boot
     - name: test-jx3-spring
     scheduler: in-repo
   - owner: property-xyz-bot
