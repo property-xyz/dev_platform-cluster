@@ -21,11 +21,10 @@ spec:
   - key: dev
     owner: property-xyz
     repository: dev_platform-cluster
-  - key: staging
   - key: production
   - gitKind: github
     gitServer: https://github.com
-    key: stage-platform-cluster
+    key: staging
     owner: property-xyz
     promotionStrategy: Auto
     remoteCluster: true
@@ -33,7 +32,7 @@ spec:
   ingress:
     domain: dev.property.xyz
     externalDNS: true
-    namespaceSubDomain: -jx.
+    namespaceSubDomain: .
     tls:
       email: security@property.xyz
       enabled: true
