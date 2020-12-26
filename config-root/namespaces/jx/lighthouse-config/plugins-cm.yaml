@@ -28,6 +28,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - property-xyz/tes-jx3-boot
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - property-xyz/test-jx3-spring
       require_self_approval: true
     cat: {}
@@ -109,6 +113,22 @@ data:
       - cat
       - dog
       - pony
+      property-xyz/tes-jx3-boot:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       property-xyz/test-jx3-spring:
       - approve
       - assign
@@ -151,6 +171,9 @@ data:
       trusted_org: todo
     - repos:
       - property-xyz/stage_platform-cluster
+      trusted_org: todo
+    - repos:
+      - property-xyz/tes-jx3-boot
       trusted_org: todo
     - repos:
       - property-xyz/test-jx3-spring
