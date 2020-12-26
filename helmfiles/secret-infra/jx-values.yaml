@@ -34,7 +34,6 @@ jxRequirements:
   - key: dev
     owner: property-xyz
     repository: dev_platform-cluster
-  - key: production
   - gitKind: github
     gitServer: https://github.com
     key: staging
@@ -44,7 +43,7 @@ jxRequirements:
     repository: stage_platform-cluster
   - gitKind: github
     gitServer: https://github.com
-    key: prod-platform-cluster
+    key: production
     owner: property-xyz
     promotionStrategy: Auto
     remoteCluster: true

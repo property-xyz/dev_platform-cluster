@@ -2,13 +2,13 @@
 apiVersion: jenkins.io/v1
 kind: SourceRepository
 metadata:
-  name: "prod-platform-cluster"
+  name: "production"
   labels:
     jenkins.io/gitSync: "false"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx
 spec:
-  description: "the git repository for the Prod-Platform-Cluster environment"
+  description: "the git repository for the Production environment"
   provider: "https://github.com"
   providerKind: 'github'
   providerName: 'github'
