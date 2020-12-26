@@ -8,5 +8,6 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
+    - name: prod_platform-cluster
     - name: stage_platform-cluster
     scheduler: in-repo
