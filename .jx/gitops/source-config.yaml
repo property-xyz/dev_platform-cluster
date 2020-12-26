@@ -12,3 +12,9 @@ spec:
     - name: stage_platform-cluster
     - name: test-jx3-spring
     scheduler: in-repo
+  - owner: property-xyz-bot
+    provider: https://github.com
+    providerKind: github
+    repositories:
+    - name: test-jx3-angular
+    scheduler: in-repo
