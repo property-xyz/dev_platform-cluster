@@ -8,6 +8,7 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
+    - name: platform-backend
     - name: platform-postcodes-db
     - name: prod_platform-cluster
     - name: stage_platform-cluster
