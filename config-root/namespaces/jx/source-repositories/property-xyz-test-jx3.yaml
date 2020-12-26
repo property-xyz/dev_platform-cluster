@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: property-xyz
+    provider: github
+    repository: test-jx3
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: property-xyz-test-jx3
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/property-xyz/test-jx3.git
+  org: property-xyz
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: test-jx3
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/property-xyz/test-jx3

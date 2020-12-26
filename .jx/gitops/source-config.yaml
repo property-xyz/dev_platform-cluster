@@ -12,4 +12,5 @@ spec:
     - name: platform-postcodes-db
     - name: prod_platform-cluster
     - name: stage_platform-cluster
+    - name: test-jx3
     scheduler: in-repo
