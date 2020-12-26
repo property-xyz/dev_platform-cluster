@@ -17,7 +17,7 @@ metadata:
   namespace: jx
 spec:
   rules:
-    - host: dashboard-jx.dev.property.xyz
+    - host: dashboard.dev.property.xyz
       http:
         paths:
           - backend:
@@ -26,4 +26,4 @@ spec:
   tls:
     - secretName: tls-dev-property-xyz-p
       hosts:
-        - dashboard-jx.dev.property.xyz
+        - dashboard.dev.property.xyz

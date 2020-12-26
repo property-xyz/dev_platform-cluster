@@ -9,8 +9,12 @@ metadata:
   name: "staging"
   namespace: jx
 spec:
+  source:
+    ref: "master"
+    url: https://github.com/property-xyz/stage_platform-cluster.git
   kind: Permanent
   label: Staging
   namespace: jx-staging
   promotionStrategy: "Auto"
   order: 100
+  remoteCluster: true

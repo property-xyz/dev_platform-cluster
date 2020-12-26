@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         property-xyz/dev_platform-cluster: true
+        property-xyz/stage_platform-cluster: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         property-xyz/dev_platform-cluster: merge
+        property-xyz/stage_platform-cluster: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - property-xyz/dev_platform-cluster
+        - property-xyz/stage_platform-cluster
       - labels:
         - updatebot
         missingLabels:
@@ -41,7 +44,8 @@ data:
         - needs-rebase
         repos:
         - property-xyz/dev_platform-cluster
-      target_url: http://dashboard-jx.dev.property.xyz
+        - property-xyz/stage_platform-cluster
+      target_url: http://dashboard.dev.property.xyz
 kind: ConfigMap
 metadata:
   creationTimestamp: null

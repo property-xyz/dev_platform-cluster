@@ -34,12 +34,18 @@ jxRequirements:
   - key: dev
     owner: property-xyz
     repository: dev_platform-cluster
-  - key: staging
   - key: production
+  - gitKind: github
+    gitServer: https://github.com
+    key: staging
+    owner: property-xyz
+    promotionStrategy: Auto
+    remoteCluster: true
+    repository: stage_platform-cluster
   ingress:
     domain: dev.property.xyz
     externalDNS: true
-    namespaceSubDomain: -tekton-pipelines.
+    namespaceSubDomain: .
     tls:
       email: security@property.xyz
       enabled: true
