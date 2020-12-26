@@ -8,11 +8,8 @@ data:
     in_repo_config:
       enabled:
         property-xyz/dev_platform-cluster: true
-        property-xyz/platform-backend: true
-        property-xyz/platform-postcodes-db: true
         property-xyz/prod_platform-cluster: true
         property-xyz/stage_platform-cluster: true
-        property-xyz/test-jx3: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -58,9 +55,6 @@ data:
         - property-xyz/dev_platform-cluster
         - property-xyz/prod_platform-cluster
         - property-xyz/stage_platform-cluster
-        - property-xyz/platform-backend
-        - property-xyz/platform-postcodes-db
-        - property-xyz/test-jx3
       target_url: http://dashboard.dev.property.xyz
 kind: ConfigMap
 metadata:
