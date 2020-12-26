@@ -10,4 +10,5 @@ spec:
     repositories:
     - name: prod_platform-cluster
     - name: stage_platform-cluster
+    - name: test-jx3-spring
     scheduler: in-repo
