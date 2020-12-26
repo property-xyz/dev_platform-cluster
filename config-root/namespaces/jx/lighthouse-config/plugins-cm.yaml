@@ -8,7 +8,15 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - property-xyz/prod_platform-cluster
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - property-xyz/stage_platform-cluster
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - property-xyz/prod_platform-cluster
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
@@ -30,6 +38,22 @@ data:
     plugins:
       property-xyz/dev_platform-cluster:
       - config-updater
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      property-xyz/prod_platform-cluster:
       - approve
       - assign
       - blunderbuss
@@ -74,7 +98,13 @@ data:
       - property-xyz/dev_platform-cluster
       trusted_org: todo
     - repos:
+      - property-xyz/prod_platform-cluster
+      trusted_org: todo
+    - repos:
       - property-xyz/stage_platform-cluster
+      trusted_org: todo
+    - repos:
+      - property-xyz/prod_platform-cluster
       trusted_org: todo
     - repos:
       - property-xyz/stage_platform-cluster

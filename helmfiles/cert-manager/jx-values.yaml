@@ -42,6 +42,13 @@ jxRequirements:
     promotionStrategy: Auto
     remoteCluster: true
     repository: stage_platform-cluster
+  - gitKind: github
+    gitServer: https://github.com
+    key: prod-platform-cluster
+    owner: property-xyz
+    promotionStrategy: Auto
+    remoteCluster: true
+    repository: prod_platform-cluster
   ingress:
     domain: dev.property.xyz
     externalDNS: true

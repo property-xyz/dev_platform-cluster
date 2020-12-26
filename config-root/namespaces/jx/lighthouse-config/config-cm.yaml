@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         property-xyz/dev_platform-cluster: true
+        property-xyz/prod_platform-cluster: true
         property-xyz/stage_platform-cluster: true
     plank: {}
     pod_namespace: jx
@@ -21,6 +22,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         property-xyz/dev_platform-cluster: merge
+        property-xyz/prod_platform-cluster: merge
         property-xyz/stage_platform-cluster: merge
       queries:
       - labels:
@@ -33,6 +35,7 @@ data:
         - needs-rebase
         repos:
         - property-xyz/dev_platform-cluster
+        - property-xyz/prod_platform-cluster
         - property-xyz/stage_platform-cluster
       - labels:
         - updatebot
@@ -44,6 +47,7 @@ data:
         - needs-rebase
         repos:
         - property-xyz/dev_platform-cluster
+        - property-xyz/prod_platform-cluster
         - property-xyz/stage_platform-cluster
       target_url: http://dashboard.dev.property.xyz
 kind: ConfigMap
