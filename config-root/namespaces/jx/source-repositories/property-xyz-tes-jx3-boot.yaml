@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: property-xyz
+    provider: github
+    repository: tes-jx3-boot
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: property-xyz-tes-jx3-boot
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/property-xyz/tes-jx3-boot.git
+  org: property-xyz
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: tes-jx3-boot
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/property-xyz/tes-jx3-boot
