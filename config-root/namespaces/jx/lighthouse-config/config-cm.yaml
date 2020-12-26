@@ -22,11 +22,8 @@ data:
         skip-unknown-contexts: false
       merge_method:
         property-xyz/dev_platform-cluster: merge
-        property-xyz/platform-backend: merge
-        property-xyz/platform-postcodes-db: merge
         property-xyz/prod_platform-cluster: merge
         property-xyz/stage_platform-cluster: merge
-        property-xyz/test-jx3: merge
       queries:
       - labels:
         - approved
@@ -40,9 +37,6 @@ data:
         - property-xyz/dev_platform-cluster
         - property-xyz/prod_platform-cluster
         - property-xyz/stage_platform-cluster
-        - property-xyz/platform-backend
-        - property-xyz/platform-postcodes-db
-        - property-xyz/test-jx3
       - labels:
         - updatebot
         missingLabels:

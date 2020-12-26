@@ -16,23 +16,11 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
-      - property-xyz/platform-backend
-      require_self_approval: true
-    - lgtm_acts_as_approve: true
-      repos:
-      - property-xyz/platform-postcodes-db
-      require_self_approval: true
-    - lgtm_acts_as_approve: true
-      repos:
       - property-xyz/prod_platform-cluster
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
       - property-xyz/stage_platform-cluster
-      require_self_approval: true
-    - lgtm_acts_as_approve: true
-      repos:
-      - property-xyz/test-jx3
       require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
@@ -116,19 +104,10 @@ data:
       - property-xyz/stage_platform-cluster
       trusted_org: todo
     - repos:
-      - property-xyz/platform-backend
-      trusted_org: todo
-    - repos:
-      - property-xyz/platform-postcodes-db
-      trusted_org: todo
-    - repos:
       - property-xyz/prod_platform-cluster
       trusted_org: todo
     - repos:
       - property-xyz/stage_platform-cluster
-      trusted_org: todo
-    - repos:
-      - property-xyz/test-jx3
       trusted_org: todo
     welcome:
     - message_template: Welcome
