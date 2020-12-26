@@ -1,0 +1,21 @@
+# Source: jxboot-helmfile-resources/templates/repositories.yaml
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  name: "prod-platform-cluster"
+  labels:
+    jenkins.io/gitSync: "false"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx
+spec:
+  description: "the git repository for the Prod-Platform-Cluster environment"
+  provider: "https://github.com"
+  providerKind: 'github'
+  providerName: 'github'
+  org: "property-xyz"
+  repo: "prod_platform-cluster"
+  httpCloneURL: "https://github.com/property-xyz/prod_platform-cluster.git"
+  url: "https://github.com/property-xyz/prod_platform-cluster.git"
+  scheduler:
+    kind: Scheduler
+    name: "in-repo"

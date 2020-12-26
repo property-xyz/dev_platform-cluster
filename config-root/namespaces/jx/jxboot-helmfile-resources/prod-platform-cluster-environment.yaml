@@ -1,0 +1,20 @@
+# Source: jxboot-helmfile-resources/templates/environments.yaml
+apiVersion: jenkins.io/v1
+kind: Environment
+metadata:
+  labels:
+    env: "prod-platform-cluster"
+    team: jx
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: "prod-platform-cluster"
+  namespace: jx
+spec:
+  source:
+    ref: "master"
+    url: https://github.com/property-xyz/prod_platform-cluster.git
+  kind: Permanent
+  label: Prod-Platform-Cluster
+  order: 500
+  promotionStrategy: "Auto"
+  namespace: "jx-prod-platform-cluster"
+  remoteCluster: true
