@@ -13,9 +13,9 @@ metadata:
 spec:
   ports:
     - name: registry
-      port: 5443
+      port: 5000
     - name: controller
-      port: 8443
+      port: 8080
   selector:
     release: harbor
     app: "harbor"

@@ -14,7 +14,6 @@ metadata:
     ingress.kubernetes.io/ssl-redirect: "true"
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
   namespace: jx
 spec:
   tls:
@@ -27,25 +26,25 @@ spec:
           - path: /
             backend:
               serviceName: harbor-harbor-portal
-              servicePort: 443
+              servicePort: 80
           - path: /api
             backend:
               serviceName: harbor-harbor-core
-              servicePort: 443
+              servicePort: 80
           - path: /service
             backend:
               serviceName: harbor-harbor-core
-              servicePort: 443
+              servicePort: 80
           - path: /v2
             backend:
               serviceName: harbor-harbor-core
-              servicePort: 443
+              servicePort: 80
           - path: /chartrepo
             backend:
               serviceName: harbor-harbor-core
-              servicePort: 443
+              servicePort: 80
           - path: /c
             backend:
               serviceName: harbor-harbor-core
-              servicePort: 443
+              servicePort: 80
       host: harbor.dev.property.xyz

@@ -29,7 +29,6 @@ spec:
         component: trivy
       annotations:
         checksum/secret: dd3b1238de5d1ab27b0c312c0a7a8897beb7b4db726906fcfb94e37643b9bc6e
-        checksum/tls: 03c51d40cb2ddc985c8d967c493c051954b44c2137c3ed6624ddeede1a837cec
     spec:
       securityContext:
         runAsNonRoot: true
@@ -74,13 +73,7 @@ spec:
             - name: "SCANNER_TRIVY_INSECURE"
               value: "false"
             - name: SCANNER_API_SERVER_ADDR
-              value: ":8443"
-            - name: INTERNAL_TLS_ENABLED
-              value: "true"
-            - name: SCANNER_API_SERVER_TLS_KEY
-              value: /etc/harbor/ssl/trivy/tls.key
-            - name: SCANNER_API_SERVER_TLS_CERTIFICATE
-              value: /etc/harbor/ssl/trivy/tls.crt
+              value: ":8080"
             - name: "SCANNER_REDIS_URL"
               valueFrom:
                 secretKeyRef:
@@ -98,17 +91,15 @@ spec:
                   key: redisURL
           ports:
             - name: api-server
-              containerPort: 8443
+              containerPort: 8080
           volumeMounts:
             - name: data
               mountPath: /home/scanner/.cache
               subPath:
               readOnly: false
-            - name: trivy-internal-certs
-              mountPath: /etc/harbor/ssl/trivy
           livenessProbe:
             httpGet:
-              scheme: HTTPS
+              scheme: HTTP
               path: /probe/healthy
               port: api-server
             initialDelaySeconds: 5
@@ -117,7 +108,7 @@ spec:
             failureThreshold: 10
           readinessProbe:
             httpGet:
-              scheme: HTTPS
+              scheme: HTTP
               path: /probe/ready
               port: api-server
             initialDelaySeconds: 5
@@ -131,10 +122,6 @@ spec:
             requests:
               cpu: 200m
               memory: 512Mi
-      volumes:
-        - name: trivy-internal-certs
-          secret:
-            secretName: harbor-harbor-trivy-internal-tls
   volumeClaimTemplates:
     - metadata:
         name: data

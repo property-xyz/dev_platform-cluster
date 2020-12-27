@@ -27,7 +27,6 @@ spec:
         app: "harbor"
         component: portal
       annotations:
-        checksum/tls: 9a71fc0b9aa62648e257851a50eb7fa53eb21a89c2c2f3a9bae3faca9cc9e67f
     spec:
       containers:
         - name: portal
@@ -36,29 +35,24 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              scheme: HTTPS
-              port: 8443
+              scheme: HTTP
+              port: 8080
             initialDelaySeconds: 300
             periodSeconds: 10
           readinessProbe:
             httpGet:
               path: /
-              scheme: HTTPS
-              port: 8443
+              scheme: HTTP
+              port: 8080
             initialDelaySeconds: 1
             periodSeconds: 10
           ports:
-            - containerPort: 8443
+            - containerPort: 8080
           volumeMounts:
             - name: portal-config
               mountPath: /etc/nginx/nginx.conf
               subPath: nginx.conf
-            - name: portal-internal-certs
-              mountPath: /etc/harbor/ssl/portal
       volumes:
         - name: portal-config
           configMap:
             name: "harbor-harbor-portal"
-        - name: portal-internal-certs
-          secret:
-            secretName: harbor-harbor-portal-internal-tls

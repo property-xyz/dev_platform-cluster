@@ -11,10 +11,10 @@ metadata:
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx
 data:
-  CORE_URL: "https://harbor-harbor-core:443"
-  TOKEN_SERVICE_URL: "https://harbor-harbor-core:443/service/token"
-  REGISTRY_URL: "https://harbor-harbor-registry:5443"
-  REGISTRY_CONTROLLER_URL: "https://harbor-harbor-registry:8443"
+  CORE_URL: "http://harbor-harbor-core:80"
+  TOKEN_SERVICE_URL: "http://harbor-harbor-core:80/service/token"
+  REGISTRY_URL: "http://harbor-harbor-registry:5000"
+  REGISTRY_CONTROLLER_URL: "http://harbor-harbor-registry:8080"
   REGISTRY_CREDENTIAL_USERNAME: "harbor_registry_user"
   HTTP_PROXY: ""
   HTTPS_PROXY: ""
