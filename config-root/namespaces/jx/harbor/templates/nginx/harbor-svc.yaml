@@ -1,0 +1,31 @@
+# Source: harbor/templates/nginx/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: harbor
+  labels:
+    app.kubernetes.io/name: harbor
+    helm.sh/chart: harbor-9.2.1
+    app.kubernetes.io/instance: harbor
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: nginx
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+  namespace: jx
+spec:
+  type: LoadBalancer
+  externalTrafficPolicy:
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+    - name: https
+      port: 443
+      targetPort: https
+    - name: notary
+      port: 4443
+      targetPort: notary
+  selector:
+    app.kubernetes.io/name: harbor
+    app.kubernetes.io/instance: harbor
+    app.kubernetes.io/component: nginx
