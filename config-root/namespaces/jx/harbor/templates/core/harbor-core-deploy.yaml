@@ -31,9 +31,9 @@ spec:
       annotations:
         checksum/configmap: de137ba6c71cb5da84cea31efc42d653c558c5d51e8f63867c924a63922aa6be
         checksum/configmap-envvars: e22e47ee0e5e9b40790cc25eac12bbe446db000a60ba136e506c65edff928bf9
-        checksum/secret: b285dd9336abfa010ed53ca38926d78e80a13a414c76afbafcc6b9c59317b6c4
-        checksum/secret-envvars: 3868fbaca75b083b7dd075a51ef30d9de1e86c6a4cc8769b1435673f9d488582
-        checksum/secret-jobservice: e2a3a822c95cd197cc5f41419bc8cb1298f3a7cae363c2bb6047c223eb4c30a7
+        checksum/secret: 2e4195e5a67a7097d98a4ad2897467d44bd8f1cd84efcf81360b463cd05f73be
+        checksum/secret-envvars: e8926e9d2abafad77673faafbcc46772b79ebccb3c09cea927b290ddc43b02b2
+        checksum/secret-jobservice: 07f42c9299ffb1d9d46c6f1483f59818f15109eee9e1ffedfab4821d7ff182fb
     spec:
       affinity:
         podAffinity:
