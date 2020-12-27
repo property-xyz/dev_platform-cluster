@@ -77,6 +77,8 @@ releases:
 - chart: ../../charts/harbor
   version: 0.1.0
   name: harbor-resources
+  values:
+  - jx-values.yaml
 - chart: bitnami/harbor
   version: 9.2.1
   name: harbor

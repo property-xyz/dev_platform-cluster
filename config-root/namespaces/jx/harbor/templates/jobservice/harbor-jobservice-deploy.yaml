@@ -34,8 +34,8 @@ spec:
         checksum/configmap: ea545d0381bea24ded8ae2912ad790a1baa3e4ef28ecb4ed18ff321293fbdfe3
         checksum/configmap-env: 1587f38e63be5740764d762650eb09cd86a6300cdd42303a8bec673bebb754e9
         checksum/secret-env: a734fb057e10ff72d0c479d2649945c3fa6834f03ca5a7e305bd785fb38985fa
-        checksum/secret: bc97cdd555c7bc959bec3190964edb6d00619272103e597b9bd13cbbef31b260
-        checksum/secret-core: 75a8c0b5025a36999e8769fdd14a4d3f21201afee9a2c56cc4c0c48499eefcc9
+        checksum/secret: c81c3811a865b2de11dd1e9079a57ec7b7b52ddce46519ee253793e83efa7b10
+        checksum/secret-core: c0bfbd9a5ca898f447a4bb185093c48addba4ced1a13464ad4d0a494d0c13f91
     spec:
       affinity:
         podAffinity:
