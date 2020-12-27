@@ -10,3 +10,5 @@ service:
     notaryExistingSecret: tls-dev-property-xyz-p
 chartmuseum:
   enabled: false
+clair:
+  enabled: false
