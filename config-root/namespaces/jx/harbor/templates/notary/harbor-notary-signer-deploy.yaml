@@ -31,7 +31,7 @@ spec:
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/component: notary-signer
       annotations:
-        checksum/secret: bc7059236484d4d47af1d159484f6cf3f7d25cdf030d2cab9dffd8fb3bd4d619
+        checksum/secret: b59b54dc89b40bfac1bd8b941f839d69704d98d0eb8b4ba349e7c8abef6d7b79
     spec:
       affinity:
         podAffinity:
