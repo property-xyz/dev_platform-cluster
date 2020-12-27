@@ -13,3 +13,5 @@ chartmuseum:
 clair:
   enabled: false
 redis.cluster.enabled: true
+postgresql.replication.enabled: true
+internalTLS.enabled: true
