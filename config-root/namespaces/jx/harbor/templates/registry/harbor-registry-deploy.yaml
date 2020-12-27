@@ -32,9 +32,9 @@ spec:
         app.kubernetes.io/component: registry
       annotations:
         checksum/configmap: 4f9c63d1ee4ff406ff3b05efa6fc5fa2a54308d0b56bfd4e1479007538fbd1ea
-        checksum/secret: e049bcfbc0103dc3622fca6db528ca5818ca627824285fdd2d91d20b5cd0bbc0
-        checksum/secret-jobservice: b5d2540c210ad905bfc2e606cfe6fd94b0d5e3c6431f32afd1f39ac057d754d2
-        checksum/secret-core: 345eb342eb3b5921b36bf0dafa57593bb5c7571e556483da9308f7a692b16458
+        checksum/secret: 29b16f311b3465817bb2196bbec10e244d132424ce51c79004f39374e2025401
+        checksum/secret-jobservice: d77803131531bb4bfe030bf84f0b571d5e7471efe84219d9bb31383e7cdcdf55
+        checksum/secret-core: 8a589f98f2f67e7180ce06189e0a3cd3dcf4b374a53ad3a0605cc9bf704d4b61
     spec:
       affinity:
         podAffinity:
