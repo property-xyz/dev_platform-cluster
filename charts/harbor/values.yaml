@@ -1,0 +1,29 @@
+expose:
+  ingress:
+    hosts:
+      core: harbor.dev.property.xyz
+      notary: notary.dev.property.xyz
+  tls:
+    enabled: true
+    certSource: secret
+    secret:
+      notarySecretName: tls-dev-property-xyz-p
+      secretName: tls-dev-property-xyz-p
+internalTLS:
+  enabled: true
+chartmuseum:
+  enabled: false
+clair:
+  enabled: false
+persistence:
+  persistentVolumeClaim:
+    registry:
+      storageClass: slow
+    jobservice:
+      storageClass: slow
+    trivy:
+      storageClass: slow
+    database:
+      storageClass: slow
+    redis:
+      storageClass: slow
