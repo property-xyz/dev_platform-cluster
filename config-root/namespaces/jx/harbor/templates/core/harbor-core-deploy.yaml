@@ -30,10 +30,10 @@ spec:
         app.kubernetes.io/component: core
       annotations:
         checksum/configmap: de137ba6c71cb5da84cea31efc42d653c558c5d51e8f63867c924a63922aa6be
-        checksum/configmap-envvars: d2a9647c5fcd272b5cdefa42bbee813d85328b96946b698f1c0695bee6f696f5
-        checksum/secret: 982cf13c052905cf581dc8e6e3cec5407722fe8175fdbe284bbed02cd3058a64
-        checksum/secret-envvars: beeb457c55f4166f61d02f044ab142cc9e9d6e58d55d8d545b0151a9e015cec9
-        checksum/secret-jobservice: 632f6b01bf0291b578bbe85c7ed0fbf774ebebc67248e8ec5d5a11b787e07da3
+        checksum/configmap-envvars: e22e47ee0e5e9b40790cc25eac12bbe446db000a60ba136e506c65edff928bf9
+        checksum/secret: c5dfe92109df60e6728358ead96ae944f3e910e11b73ed316e83c3a34c5ffb2f
+        checksum/secret-envvars: f57465a3e038ccbc9c06c90682480686c2b03716ca597195a0973fa49f39aa81
+        checksum/secret-jobservice: 550718420f1b2dde754b8a20dd0c73ab61aea0cbe4373feba9630d0d7f0da041
     spec:
       affinity:
         podAffinity:

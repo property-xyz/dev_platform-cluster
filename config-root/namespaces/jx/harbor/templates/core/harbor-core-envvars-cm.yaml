@@ -29,7 +29,7 @@ data:
   CORE_LOCAL_URL: "http://127.0.0.1:8080"
   CFG_EXPIRATION: "5"
   ADMIRAL_URL: "NA"
-  WITH_CLAIR: "true"
+  WITH_CLAIR: "false"
   CLAIR_DB_HOST: "harbor-postgresql"
   CLAIR_DB_PORT: "5432"
   CLAIR_DB_USERNAME: "postgres"
