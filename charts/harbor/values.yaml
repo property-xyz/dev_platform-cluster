@@ -10,6 +10,7 @@ expose:
       notarySecretName: tls-dev-property-xyz-p
       secretName: tls-dev-property-xyz-p
 internalTLS:
+  certSource: auto
   enabled: true
 chartmuseum:
   enabled: false
