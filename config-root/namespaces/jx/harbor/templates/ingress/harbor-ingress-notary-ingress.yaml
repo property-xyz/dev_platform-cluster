@@ -1,0 +1,30 @@
+# Source: harbor/templates/ingress/ingress.yaml
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: harbor-ingress-notary
+  labels:
+    app.kubernetes.io/name: harbor
+    helm.sh/chart: harbor-9.2.1
+    app.kubernetes.io/instance: harbor
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    ingress.kubernetes.io/proxy-body-size: "0"
+    ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  namespace: jx
+spec:
+  tls:
+    - secretName: tls-dev-property-xyz-p
+      hosts:
+        - notary.dev.property.xyz
+  rules:
+    - http:
+        paths:
+          - path: /
+            backend:
+              serviceName: harbor-notary-server
+              servicePort: 4443
+      host: notary.dev.property.xyz

@@ -30,10 +30,10 @@ spec:
         app.kubernetes.io/component: core
       annotations:
         checksum/configmap: de137ba6c71cb5da84cea31efc42d653c558c5d51e8f63867c924a63922aa6be
-        checksum/configmap-envvars: f41f679f45728e409812f7e030352a0d4bd980dfe97cd7fe33aeb72de9e73e3b
-        checksum/secret: 86479254cf8c668a0f52ad0c86022b955bb770cf2a506d92cc427a57152ae5bc
-        checksum/secret-envvars: 9f0e8dbf3fbb3018942e840b3161075c271e71c6a4980b23ec0a5a98d1bc8954
-        checksum/secret-jobservice: 4d9f9939f09dd6e5f5ce119c3a235051937fef3865b14f670fdfa2fc2a56fb0e
+        checksum/configmap-envvars: d2a9647c5fcd272b5cdefa42bbee813d85328b96946b698f1c0695bee6f696f5
+        checksum/secret: 26ba85357118191f61fa62fb52e90c85a4b0e6e2fd3785c06ed6d7821e7e15d8
+        checksum/secret-envvars: 435d85f030e7672e7e8bd3ba77f87b0ca3f13d2fbcd3bc3dfbffee9add0fde22
+        checksum/secret-jobservice: e72277ea85b490e0ae741564430311720d292fabfe1890e62a1e6d600153fcf6
     spec:
       affinity:
         podAffinity:
@@ -135,6 +135,6 @@ spec:
             secretName: harbor-core
         - name: ca-download
           secret:
-            secretName: harbor-nginx
+            secretName: tls-dev-property-xyz-p
         - name: psc
           emptyDir: {}

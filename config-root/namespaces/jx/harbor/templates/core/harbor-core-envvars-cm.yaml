@@ -40,7 +40,7 @@ data:
   WITH_TRIVY: "true"
   TRIVY_ADAPTER_URL: "http://harbor-trivy:8080"
   REGISTRY_STORAGE_PROVIDER_NAME: "filesystem"
-  WITH_CHARTMUSEUM: "true"
+  WITH_CHARTMUSEUM: "false"
   CHART_REPOSITORY_URL: "http://harbor-chartmuseum"
   LOG_LEVEL: "debug"
   CONFIG_PATH: "/etc/core/app.conf"
