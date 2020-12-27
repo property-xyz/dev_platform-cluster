@@ -27,7 +27,7 @@ spec:
         app: "harbor"
         component: portal
       annotations:
-        checksum/tls: db4b014630cd07428540e7d64fc3c36907dad05b5871c44d23255a8509a48a4a
+        checksum/tls: aa218b2b4e25268b88a9fb28a36cd065418cce147e14cc0a90efbf1ddd954fcb
     spec:
       containers:
         - name: portal

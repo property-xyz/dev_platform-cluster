@@ -29,7 +29,7 @@ spec:
         component: trivy
       annotations:
         checksum/secret: dd3b1238de5d1ab27b0c312c0a7a8897beb7b4db726906fcfb94e37643b9bc6e
-        checksum/tls: 062a901e73ed48469d5ac442fdb18438cf067ebab6307cc4b823849dd7268d89
+        checksum/tls: 792b0e2f45112541d531d91f4b85874eeb19f5144d5193a690da760f5c848f1c
     spec:
       securityContext:
         runAsNonRoot: true

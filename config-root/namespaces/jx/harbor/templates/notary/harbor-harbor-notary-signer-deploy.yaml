@@ -29,7 +29,7 @@ spec:
         app: "harbor"
         component: notary-signer
       annotations:
-        checksum/secret: 860d334d2d29c620f54b62288c57565b467d094e5e8ee84bb8497b8118172759
+        checksum/secret: 1f83cc46832283b078f5802af3f930d19f1220fad4b4a33d95e35cedfe6ff2c7
     spec:
       securityContext:
         fsGroup: 10000
