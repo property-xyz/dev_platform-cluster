@@ -1,0 +1,64 @@
+# Source: harbor/templates/portal/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "harbor-harbor-portal"
+  labels:
+    heritage: Helm
+    release: harbor
+    chart: harbor
+    app: "harbor"
+    component: portal
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      release: harbor
+      app: "harbor"
+      component: portal
+  template:
+    metadata:
+      labels:
+        release: harbor
+        app: "harbor"
+        component: portal
+      annotations:
+        checksum/tls: 2eb78850670492a3b867832d5be928b2d88ef3535d3c91ac53b2e1a9b814945a
+    spec:
+      containers:
+        - name: portal
+          image: goharbor/harbor-portal:v2.1.2
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            httpGet:
+              path: /
+              scheme: HTTPS
+              port: 8443
+            initialDelaySeconds: 300
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /
+              scheme: HTTPS
+              port: 8443
+            initialDelaySeconds: 1
+            periodSeconds: 10
+          ports:
+            - containerPort: 8443
+          volumeMounts:
+            - name: portal-config
+              mountPath: /etc/nginx/nginx.conf
+              subPath: nginx.conf
+            - name: portal-internal-certs
+              mountPath: /etc/harbor/ssl/portal
+      volumes:
+        - name: portal-config
+          configMap:
+            name: "harbor-harbor-portal"
+        - name: portal-internal-certs
+          secret:
+            secretName: harbor-harbor-portal-internal-tls

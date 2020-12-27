@@ -79,10 +79,14 @@ releases:
 - chart: ../../charts/harbor
   version: 0.1.0
   name: harbor-resources
+  values:
+  - ../../charts/harbor/values.yaml
+  - jx-values.yaml
 - chart: harbor/harbor
   version: 1.5.2
   name: harbor
   values:
   - ../../charts/harbor/values.yaml
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}

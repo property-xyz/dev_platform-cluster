@@ -1,0 +1,23 @@
+# Source: harbor/templates/registry/registry-cm.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "harbor-harbor-registry"
+  labels:
+    heritage: Helm
+    release: harbor
+    chart: harbor
+    app: "harbor"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx
+data:
+  config.yml: "version: 0.1\nlog:\n  level: info\n  fields:\n    service: registry\nstorage:\n  filesystem:\n    rootdirectory: /storage\n  cache:\n    layerinfo: redis\n  maintenance:\n    uploadpurging:\n      enabled: false\n  delete:\n    enabled: true\n  redirect:\n    disable: false\nredis:\n  addr: harbor-harbor-redis:6379\n  db: 2\n  password: \n  readtimeout: 10s\n  writetimeout: 10s\n  dialtimeout: 10s\nhttp:\n  addr: :5443\n  relativeurls: false\n  tls:\n    certificate: /etc/harbor/ssl/registry/tls.crt\n    key: /etc/harbor/ssl/registry/tls.key\n    minimumtls: tls1.2\n  # set via environment variable\n  # secret: placeholder\n  debug:\n    addr: localhost:5001\nauth:\n  htpasswd:\n    realm: harbor-registry-basic-realm\n    path: /etc/registry/passwd\nvalidation:\n  disabled: true\ncompatibility:\n  schema1:\n    enabled: true\n"
+  ctl-config.yml: |
+    ---
+    protocol: "https"
+    port: 8443
+    https_config:
+      cert: "/etc/harbor/ssl/registry/tls.crt"
+      key: "/etc/harbor/ssl/registry/tls.key"
+    log_level: info
+    registry_config: "/etc/registry/config.yml"

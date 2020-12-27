@@ -1,0 +1,21 @@
+# Source: harbor/templates/jobservice/jobservice-cm-env.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "harbor-harbor-jobservice-env"
+  labels:
+    heritage: Helm
+    release: harbor
+    chart: harbor
+    app: "harbor"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx
+data:
+  CORE_URL: "https://harbor-harbor-core:443"
+  TOKEN_SERVICE_URL: "https://harbor-harbor-core:443/service/token"
+  REGISTRY_URL: "https://harbor-harbor-registry:5443"
+  REGISTRY_CONTROLLER_URL: "https://harbor-harbor-registry:8443"
+  REGISTRY_CREDENTIAL_USERNAME: "harbor_registry_user"
+  HTTP_PROXY: ""
+  HTTPS_PROXY: ""
+  NO_PROXY: "harbor-harbor-core,harbor-harbor-jobservice,harbor-harbor-database,harbor-harbor-chartmuseum,harbor-harbor-clair,harbor-harbor-notary-server,harbor-harbor-notary-signer,harbor-harbor-registry,harbor-harbor-portal,harbor-harbor-trivy,127.0.0.1,localhost,.local,.internal"

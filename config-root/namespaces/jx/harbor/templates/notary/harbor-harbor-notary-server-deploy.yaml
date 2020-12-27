@@ -1,0 +1,65 @@
+# Source: harbor/templates/notary/notary-server.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: harbor-harbor-notary-server
+  labels:
+    heritage: Helm
+    release: harbor
+    chart: harbor
+    app: "harbor"
+    component: notary-server
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      release: harbor
+      app: "harbor"
+      component: notary-server
+  template:
+    metadata:
+      labels:
+        heritage: Helm
+        release: harbor
+        chart: harbor
+        app: "harbor"
+        component: notary-server
+      annotations:
+        checksum/secret: c972617185bb47fa13d35627b2a44d4b9f6f899a79519ddf328635b4764ad9d3
+        checksum/secret-core: 3fb33d4ac6402e160f22ad93fa2625463c449b611929903c541f41579e91c6e7
+    spec:
+      securityContext:
+        fsGroup: 10000
+      containers:
+        - name: notary-server
+          image: goharbor/notary-server-photon:v2.1.2
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: MIGRATIONS_PATH
+              value: migrations/server/postgresql
+            - name: DB_URL
+              value: postgres://postgres:changeit@harbor-harbor-database:5432/notaryserver?sslmode=disable
+          volumeMounts:
+            - name: config
+              mountPath: /etc/notary/server-config.postgres.json
+              subPath: server.json
+            - name: token-service-certificate
+              mountPath: /root.crt
+              subPath: tls.crt
+            - name: signer-certificate
+              mountPath: /etc/ssl/notary/ca.crt
+              subPath: ca.crt
+      volumes:
+        - name: config
+          secret:
+            secretName: "harbor-harbor-notary-server"
+        - name: token-service-certificate
+          secret:
+            secretName: harbor-harbor-core
+        - name: signer-certificate
+          secret:
+            secretName: harbor-harbor-notary-server
