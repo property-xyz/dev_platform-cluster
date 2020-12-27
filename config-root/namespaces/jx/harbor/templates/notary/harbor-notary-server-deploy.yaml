@@ -31,8 +31,8 @@ spec:
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/component: notary-server
       annotations:
-        checksum/secret: 8ab2b07986d8a9e93669aff1d594a53eed754450ac5d254bd51aab9c5b80cc15
-        checksum/secret-core: 5b5551abf7217015ee704e12ee2fa8c9bd56eca99d267f5429eb39c3d43d8a73
+        checksum/secret: fa3eea199a712263ca60c9b354cbb0b85fcd2cfa54d64d28c05182b314ff2b6b
+        checksum/secret-core: 6f5b0fecf0979049cd2a789c9430338ac1c04a1c5ec5d393fe78edd0127ce671
     spec:
       affinity:
         podAffinity:
