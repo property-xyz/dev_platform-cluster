@@ -1,0 +1,12 @@
+ingress:
+  enabled: true
+  hosts:
+    core: harbor.dev.property.xyz
+    notary: notary.dev.property.xyz
+service:
+  type: Ingress
+  tls:
+    existingSecret: tls-dev-property-xyz-p
+    notaryExistingSecret: tls-dev-property-xyz-p
+chartmuseum:
+  enabled: false
