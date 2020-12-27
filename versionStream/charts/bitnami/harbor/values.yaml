@@ -15,3 +15,11 @@ clair:
 redis.cluster.enabled: true
 postgresql.replication.enabled: true
 internalTLS.enabled: true
+persistence:
+  persistentVolumeClaim:
+    registry:
+      storageClass: slow
+    jobservice:
+      storageClass: slow
+    trivy:
+      storageClass: slow
