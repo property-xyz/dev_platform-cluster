@@ -1,0 +1,51 @@
+# Source: harbor/templates/ingress/ingress.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: "harbor-harbor-ingress"
+  labels:
+    heritage: Helm
+    release: harbor
+    chart: harbor
+    app: "harbor"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    ingress.kubernetes.io/proxy-body-size: "0"
+    ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+  namespace: jx
+spec:
+  tls:
+    - secretName: tls-dev-property-xyz-p
+      hosts:
+        - harbor.dev.property.xyz
+  rules:
+    - http:
+        paths:
+          - path: /
+            backend:
+              serviceName: harbor-harbor-portal
+              servicePort: 443
+          - path: /api
+            backend:
+              serviceName: harbor-harbor-core
+              servicePort: 443
+          - path: /service
+            backend:
+              serviceName: harbor-harbor-core
+              servicePort: 443
+          - path: /v2
+            backend:
+              serviceName: harbor-harbor-core
+              servicePort: 443
+          - path: /chartrepo
+            backend:
+              serviceName: harbor-harbor-core
+              servicePort: 443
+          - path: /c
+            backend:
+              serviceName: harbor-harbor-core
+              servicePort: 443
+      host: harbor.dev.property.xyz

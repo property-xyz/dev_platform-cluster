@@ -1,0 +1,127 @@
+# Source: harbor/templates/core/core-dpl.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: harbor-harbor-core
+  labels:
+    heritage: Helm
+    release: harbor
+    chart: harbor
+    app: "harbor"
+    component: core
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      release: harbor
+      app: "harbor"
+      component: core
+  template:
+    metadata:
+      labels:
+        release: harbor
+        app: "harbor"
+        component: core
+      annotations:
+        checksum/configmap: 5dc38241a4a20bf2e464e815ba7f43bc4cdd8583e9c5159847aa71e302b4aa5f
+        checksum/secret: b9a98b66571d76ff6933ece8274cc0592d83997823e39210bca98275418ab327
+        checksum/secret-jobservice: 6609054071a3382d9eed6706e39f2fbcfbf3e85db9efe1da2d1386341e4e886e
+        checksum/tls: cf1209159c917c463a2835c512f9ed09c72c5c9f6ebf2cfe201e0734fb0238d0
+    spec:
+      securityContext:
+        fsGroup: 10000
+      containers:
+        - name: core
+          image: goharbor/harbor-core:v2.1.2
+          imagePullPolicy: IfNotPresent
+          startupProbe:
+            httpGet:
+              path: /api/v2.0/ping
+              scheme: HTTPS
+              port: 8443
+            failureThreshold: 360
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /api/v2.0/ping
+              scheme: HTTPS
+              port: 8443
+            failureThreshold: 2
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /api/v2.0/ping
+              scheme: HTTPS
+              port: 8443
+            failureThreshold: 2
+            periodSeconds: 10
+          envFrom:
+            - configMapRef:
+                name: "harbor-harbor-core"
+            - secretRef:
+                name: "harbor-harbor-core"
+          env:
+            - name: CORE_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: harbor-harbor-core
+                  key: secret
+            - name: JOBSERVICE_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: "harbor-harbor-jobservice"
+                  key: JOBSERVICE_SECRET
+            - name: INTERNAL_TLS_ENABLED
+              value: "true"
+            - name: INTERNAL_TLS_KEY_PATH
+              value: /etc/harbor/ssl/core/tls.key
+            - name: INTERNAL_TLS_CERT_PATH
+              value: /etc/harbor/ssl/core/tls.crt
+            - name: INTERNAL_TLS_TRUST_CA_PATH
+              value: /etc/harbor/ssl/core/ca.crt
+          ports:
+            - containerPort: 8443
+          volumeMounts:
+            - name: config
+              mountPath: /etc/core/app.conf
+              subPath: app.conf
+            - name: secret-key
+              mountPath: /etc/core/key
+              subPath: key
+            - name: token-service-private-key
+              mountPath: /etc/core/private_key.pem
+              subPath: tls.key
+            - name: ca-download
+              mountPath: /etc/core/ca
+            - name: core-internal-certs
+              mountPath: /etc/harbor/ssl/core
+            - name: psc
+              mountPath: /etc/core/token
+      volumes:
+        - name: config
+          configMap:
+            name: harbor-harbor-core
+            items:
+              - key: app.conf
+                path: app.conf
+        - name: secret-key
+          secret:
+            secretName: harbor-harbor-core
+            items:
+              - key: secretKey
+                path: key
+        - name: token-service-private-key
+          secret:
+            secretName: harbor-harbor-core
+        - name: ca-download
+          secret:
+        - name: core-internal-certs
+          secret:
+            secretName: harbor-harbor-core-internal-tls
+        - name: psc
+          emptyDir: {}

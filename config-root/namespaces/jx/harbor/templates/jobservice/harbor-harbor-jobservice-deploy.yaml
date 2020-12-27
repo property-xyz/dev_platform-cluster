@@ -1,0 +1,99 @@
+# Source: harbor/templates/jobservice/jobservice-dpl.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "harbor-harbor-jobservice"
+  labels:
+    heritage: Helm
+    release: harbor
+    chart: harbor
+    app: "harbor"
+    component: jobservice
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      release: harbor
+      app: "harbor"
+      component: jobservice
+  template:
+    metadata:
+      labels:
+        heritage: Helm
+        release: harbor
+        chart: harbor
+        app: "harbor"
+        component: jobservice
+      annotations:
+        checksum/configmap: 239eecc38352088f419bc9eb8c409aff8913e8d73eb8326171acecfb44fd4ebc
+        checksum/configmap-env: 79e12e0f142f26fa616e8329f044dc23ef3e88b6247942cf0d27e0d30a39b882
+        checksum/secret: ba926790dca100262e33923bc232d52f428990aaffe9cebdf06473c11c799b44
+        checksum/secret-core: f331ea63fc0044f604202a2c7cd9f96a863894e351819f3aa600f56bc5b52bfc
+        checksum/tls: 2d90a1e21f201857bc7f9df117789065f67e5b215f4e5bec63444ea9990c619a
+    spec:
+      securityContext:
+        fsGroup: 10000
+      containers:
+        - name: jobservice
+          image: goharbor/harbor-jobservice:v2.1.2
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            httpGet:
+              path: /api/v1/stats
+              scheme: HTTPS
+              port: 8443
+            initialDelaySeconds: 300
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /api/v1/stats
+              scheme: HTTPS
+              port: 8443
+            initialDelaySeconds: 20
+            periodSeconds: 10
+          env:
+            - name: CORE_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: harbor-harbor-core
+                  key: secret
+            - name: INTERNAL_TLS_ENABLED
+              value: "true"
+            - name: INTERNAL_TLS_KEY_PATH
+              value: /etc/harbor/ssl/jobservice/tls.key
+            - name: INTERNAL_TLS_CERT_PATH
+              value: /etc/harbor/ssl/jobservice/tls.crt
+            - name: INTERNAL_TLS_TRUST_CA_PATH
+              value: /etc/harbor/ssl/jobservice/ca.crt
+          envFrom:
+            - configMapRef:
+                name: "harbor-harbor-jobservice-env"
+            - secretRef:
+                name: "harbor-harbor-jobservice"
+          ports:
+            - containerPort: 8443
+          volumeMounts:
+            - name: jobservice-config
+              mountPath: /etc/jobservice/config.yml
+              subPath: config.yml
+            - name: job-logs
+              mountPath: /var/log/jobs
+              subPath:
+            - name: jobservice-internal-certs
+              mountPath: /etc/harbor/ssl/jobservice
+      volumes:
+        - name: jobservice-config
+          configMap:
+            name: "harbor-harbor-jobservice"
+        - name: job-logs
+          persistentVolumeClaim:
+            claimName: harbor-harbor-jobservice
+        - name: jobservice-internal-certs
+          secret:
+            secretName: harbor-harbor-jobservice-internal-tls
