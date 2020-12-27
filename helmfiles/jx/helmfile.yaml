@@ -74,5 +74,11 @@ releases:
   values:
   - ../../versionStream/charts/jx3/acme-jx/values.yaml.gotmpl
   - jx-values.yaml
+- chart: bitnami/harbor
+  name: harbor
+  version: 9.2.1
+  values:
+    - ../../versionStream/charts/bitnami/harbor/values.yaml
+    -  jx-values.yaml
 templates: {}
 renderedvalues: {}
