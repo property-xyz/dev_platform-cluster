@@ -32,7 +32,7 @@ spec:
         app.kubernetes.io/component: nginx
       annotations:
         checksum/configmap: b15d3d985fc8812db283d5128508ea3a3171169dd483854fa76c5fb5782521de
-        checksum/secret: 5c15db311d28b2b126f08132918d9e74bd70d2693c22a12a3ea9779f7a970ac3
+        checksum/secret: 4030d0d34a691f43a4cb21942de6f93a661302d13134834147237b80016f23a6
     spec:
       affinity:
         podAffinity:
