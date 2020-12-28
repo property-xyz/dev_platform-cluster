@@ -2,10 +2,16 @@
 apiVersion: redhatcop.redhat.io/v1alpha1
 kind: QuayEcosystem
 metadata:
-  name: example-quayecosystem
+  name: quayecosystem
   namespace: jx
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
+  clair:
+    enabled: true
   quay:
-    imagePullSecretName: redhat-pull-secret
+    deploymentStrategy: Recreate
+    externalAccess:
+      hostname: quay.app.example.com
+    keepConfigDeployment: true
+    skipSetup: false
