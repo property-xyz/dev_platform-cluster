@@ -1,0 +1,11 @@
+# Source: quay-operator/templates/project-quay.yaml
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: operatorgroup
+  namespace: jx
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  targetNamespaces:
+    - jx
