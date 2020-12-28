@@ -3,5 +3,13 @@ kind: QuayEcosystem
 metadata:
   name: jx-quay
 spec:
-  quay:
+  clair:
+    enabled: true
     imagePullSecretName: jenkins-docker-cfg
+  quay:
+    deploymentStrategy: Recreate
+    externalAccess:
+      hostname: quay.app.example.com
+    imagePullSecretName: jenkins-docker-cfg
+    keepConfigDeployment: true
+    skipSetup: false
