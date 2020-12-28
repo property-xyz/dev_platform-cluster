@@ -1,4 +1,4 @@
-# Source: quay-operator/templates/00_project-quay-operator.yaml
+# Source: quay-operator/templates/project-quay-operator.yaml
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
@@ -7,9 +7,7 @@ metadata:
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
-  name: quay-tng
-  channel: alpha
-  installPlanApproval: Automatic
-  source: quay-operator
-  startingCSV: quay-operator.v0.0.1
+  channel: stable
+  name: project-quay
+  source: operatorhubio-catalog
   sourceNamespace: operator-lifecycle-manager
