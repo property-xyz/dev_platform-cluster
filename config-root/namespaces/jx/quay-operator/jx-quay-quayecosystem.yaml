@@ -2,16 +2,10 @@
 apiVersion: redhatcop.redhat.io/v1alpha1
 kind: QuayEcosystem
 metadata:
-  name: quayecosystem
+  name: jx-quay
   namespace: jx
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
-  clair:
-    enabled: true
   quay:
-    deploymentStrategy: Recreate
-    externalAccess:
-      hostname: quay.app.example.com
-    keepConfigDeployment: true
-    skipSetup: false
+    imagePullSecretName: jenkins-docker-cfg
