@@ -1,0 +1,11 @@
+# Source: quay-operator/templates/quay-ecosystem-crd.yaml
+apiVersion: redhatcop.redhat.io/v1alpha1
+kind: QuayEcosystem
+metadata:
+  name: example-quayecosystem
+  namespace: jx
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  quay:
+    imagePullSecretName: redhat-pull-secret
