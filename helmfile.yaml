@@ -9,5 +9,9 @@ releases:
   - chart: ./charts/olm
     name: olm
     namespace: operator-lifecycle-manager
+  - chart: ./charts/quay
+    name: quay-operator
+    namespace: jx
+    version: 1.0.0
 templates: {}
 renderedvalues: {}
