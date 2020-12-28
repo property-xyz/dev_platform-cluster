@@ -13,8 +13,6 @@ repositories:
   url: https://storage.googleapis.com/jenkinsxio/charts
 - name: stable
   url: https://charts.helm.sh/stable
-- name: harbor
-  url: https://helm.goharbor.io
 releases:
 - chart: bitnami/external-dns
   version: 3.2.0
@@ -75,18 +73,6 @@ releases:
   name: acme-jx
   values:
   - ../../versionStream/charts/jx3/acme-jx/values.yaml.gotmpl
-  - jx-values.yaml
-- chart: ../../charts/harbor
-  version: 0.1.0
-  name: harbor-resources
-  values:
-  - ../../charts/harbor/values.yaml
-  - jx-values.yaml
-- chart: harbor/harbor
-  version: 1.5.2
-  name: harbor
-  values:
-  - ../../charts/harbor/values.yaml
   - jx-values.yaml
 templates: {}
 renderedvalues: {}
