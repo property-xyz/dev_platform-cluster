@@ -14,5 +14,6 @@ spec:
   name: quay-tng
   channel: alpha
   installPlanApproval: Automatic
-  source: operatorhubio-catalog
+  source: quay-operator
+  startingCSV: quay-operator.v0.0.1
   sourceNamespace: operator-lifecycle-manager
