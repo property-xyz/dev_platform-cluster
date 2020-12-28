@@ -14,7 +14,7 @@ spec:
     deploymentStrategy: Recreate
     externalAccess:
       type: Ingress
-      hostname: quay.app.example.com
+      hostname: quay.dev.property.xyz
     imagePullSecretName: jenkins-docker-cfg
     keepConfigDeployment: true
     skipSetup: false
