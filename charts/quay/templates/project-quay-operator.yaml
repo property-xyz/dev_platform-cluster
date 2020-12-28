@@ -11,9 +11,7 @@ kind: Subscription
 metadata:
   name: project-quay
 spec:
-  name: quay-tng
-  channel: alpha
-  installPlanApproval: Automatic
-  source: quay-operator
-  startingCSV: quay-operator.v0.0.1
+  channel: stable
+  name: project-quay
+  source: operatorhubio-catalog
   sourceNamespace: operator-lifecycle-manager
