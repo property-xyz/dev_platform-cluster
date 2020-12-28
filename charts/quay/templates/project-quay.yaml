@@ -14,4 +14,4 @@ spec:
   channel: stable
   name: project-quay
   source: operatorhubio-catalog
-  sourceNamespace: olm
+  sourceNamespace: operator-lifecycle-manager
