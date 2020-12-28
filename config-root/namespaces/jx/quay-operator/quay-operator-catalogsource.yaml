@@ -1,13 +1,11 @@
 # Source: quay-operator/templates/00_project-quay-operator.yaml
 apiVersion: operators.coreos.com/v1alpha1
-kind: Subscription
+kind: CatalogSource
 metadata:
-  name: project-quay
+  name: quay-operator
   namespace: jx
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
-  channel: stable
-  name: project-quay
-  source: operatorhubio-catalog
-  sourceNamespace: operator-lifecycle-manager
+  sourceType: grpc
+  image: quay.io/projectquay/quay-operator-catalog@sha256:1d8ba69656d23530c22af09b8058c152e1ed0e7d38140072380a7aba7fd4bce3

@@ -1,8 +1,8 @@
-# Source: quay-operator/templates/00_nooba-operator.yaml
+# Source: quay-operator/templates/00_project-quay-operator.yaml
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
-  name: operatorgroup
+  name: quay-operator
   namespace: jx
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
