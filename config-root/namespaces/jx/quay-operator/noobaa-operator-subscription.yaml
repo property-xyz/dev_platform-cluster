@@ -1,4 +1,4 @@
-# Source: quay-operator/templates/nooba-operator.yaml
+# Source: quay-operator/templates/00_nooba-operator.yaml
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
