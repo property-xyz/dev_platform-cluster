@@ -1,16 +1,4 @@
-apiVersion: redhatcop.redhat.io/v1alpha1
-kind: QuayEcosystem
+apiVersion: quay.redhat.com/v1
+kind: QuayRegistry
 metadata:
-  name: jx-quay-ecosystem
-spec:
-  quay:
-    deploymentStrategy: Recreate
-    configHostname: quayconfig-quay-enterprise.apps
-    externalAccess:
-      type: Ingress
-      hostname: quay.dev.property.xyz
-    imagePullSecretName: jenkins-docker-cfg
-    registryBackends:
-      - name: local
-        local:
-          storagePath: /opt/quayregistry
+  name: quay-jx
