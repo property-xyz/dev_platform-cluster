@@ -31,11 +31,10 @@ spec:
         app: "harbor"
         component: registry
       annotations:
-        checksum/configmap: 37ba76dc3c13c86043ba8af1d91de4f1d1ba938114a433b2c7455f2471fd2ad3
-        checksum/secret: d900feacd75e0180e84dcce5f67f3c077c64f99789763b2ad5ee9ec52a405808
-        checksum/secret-jobservice: 9bdc4bdcd3c776f25305ba5741d1d25f5dbf608ce4a27afffab4574f467bccef
-        checksum/secret-core: 1c817424e9c30f79d37a87595a1cd5ac91a3d1ae09ad19399acbf103c1c80703
-        checksum/tls: 39a655e2a03ddde42044cdb488ae44594212fec82e70af2829810092ab552b3f
+        checksum/configmap: 21be5f52b957b58ac94b7c91b0be1f575bd98fd55c1d0c813d9282619479c1be
+        checksum/secret: 136453036c759c30a1437aef645451c74665837c4d63cf671192c654f4fe65b4
+        checksum/secret-jobservice: f63a9dcdf095af08a745e3c7408edb5e83d32beaa5924477395eb055cb4220f7
+        checksum/secret-core: 8ec7c42f564fd09251ec1519ce6fadbd617b0424c453d166831e76510daeefb6
     spec:
       securityContext:
         fsGroup: 10000
@@ -46,15 +45,15 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              scheme: HTTPS
-              port: 5443
+              scheme: HTTP
+              port: 5000
             initialDelaySeconds: 300
             periodSeconds: 10
           readinessProbe:
             httpGet:
               path: /
-              scheme: HTTPS
-              port: 5443
+              scheme: HTTP
+              port: 5000
             initialDelaySeconds: 1
             periodSeconds: 10
           args: ["serve", "/etc/registry/config.yml"]
@@ -62,16 +61,8 @@ spec:
             - secretRef:
                 name: "harbor-harbor-registry"
           env:
-            - name: INTERNAL_TLS_ENABLED
-              value: "true"
-            - name: INTERNAL_TLS_KEY_PATH
-              value: /etc/harbor/ssl/registry/tls.key
-            - name: INTERNAL_TLS_CERT_PATH
-              value: /etc/harbor/ssl/registry/tls.crt
-            - name: INTERNAL_TLS_TRUST_CA_PATH
-              value: /etc/harbor/ssl/registry/ca.crt
           ports:
-            - containerPort: 5443
+            - containerPort: 5000
             - containerPort: 5001
           volumeMounts:
             - name: registry-data
@@ -86,23 +77,21 @@ spec:
             - name: registry-config
               mountPath: /etc/registry/config.yml
               subPath: config.yml
-            - name: registry-internal-certs
-              mountPath: /etc/harbor/ssl/registry
         - name: registryctl
           image: goharbor/harbor-registryctl:v2.1.2
           imagePullPolicy: IfNotPresent
           livenessProbe:
             httpGet:
               path: /api/health
-              scheme: HTTPS
-              port: 8443
+              scheme: HTTP
+              port: 8080
             initialDelaySeconds: 300
             periodSeconds: 10
           readinessProbe:
             httpGet:
               path: /api/health
-              scheme: HTTPS
-              port: 8443
+              scheme: HTTP
+              port: 8080
             initialDelaySeconds: 1
             periodSeconds: 10
           envFrom:
@@ -119,16 +108,8 @@ spec:
                 secretKeyRef:
                   name: harbor-harbor-jobservice
                   key: JOBSERVICE_SECRET
-            - name: INTERNAL_TLS_ENABLED
-              value: "true"
-            - name: INTERNAL_TLS_KEY_PATH
-              value: /etc/harbor/ssl/registry/tls.key
-            - name: INTERNAL_TLS_CERT_PATH
-              value: /etc/harbor/ssl/registry/tls.crt
-            - name: INTERNAL_TLS_TRUST_CA_PATH
-              value: /etc/harbor/ssl/registry/ca.crt
           ports:
-            - containerPort: 8443
+            - containerPort: 8080
           volumeMounts:
             - name: registry-data
               mountPath: /storage
@@ -139,8 +120,6 @@ spec:
             - name: registry-config
               mountPath: /etc/registryctl/config.yml
               subPath: ctl-config.yml
-            - name: registry-internal-certs
-              mountPath: /etc/harbor/ssl/registry
       volumes:
         - name: registry-htpasswd
           secret:
@@ -157,6 +136,3 @@ spec:
         - name: registry-data
           persistentVolumeClaim:
             claimName: harbor-harbor-registry
-        - name: registry-internal-certs
-          secret:
-            secretName: harbor-harbor-registry-internal-tls

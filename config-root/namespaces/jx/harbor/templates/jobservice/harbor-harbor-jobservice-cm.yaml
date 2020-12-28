@@ -13,11 +13,8 @@ metadata:
 data:
   config.yml: |
     #Server listening port
-    protocol: "https"
-    port: 8443
-    https_config:
-      cert: "/etc/harbor/ssl/jobservice/tls.crt"
-      key: "/etc/harbor/ssl/jobservice/tls.key"
+    protocol: "http"
+    port: 8080
     worker_pool:
       workers: 10
       backend: "redis"
