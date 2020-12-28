@@ -9,7 +9,7 @@ metadata:
 spec:
   quay:
     deploymentStrategy: Recreate
-    configHostname: example-quayecosystem-quay-enterprise.apps
+    configHostname: quayconfig-quay-enterprise.apps
     externalAccess:
       type: Ingress
       hostname: quay.dev.property.xyz
