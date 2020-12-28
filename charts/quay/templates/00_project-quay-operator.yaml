@@ -6,18 +6,10 @@ spec:
   sourceType: grpc
   image: quay.io/projectquay/quay-operator-catalog@sha256:1d8ba69656d23530c22af09b8058c152e1ed0e7d38140072380a7aba7fd4bce3
 ---
-apiVersion: operators.coreos.com/v1
-kind: OperatorGroup
-metadata:
-  name: quay-operator
-spec:
-  targetNamespaces:
-    - jx
----
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
-  name: quay-tng
+  name: quay-operator-tng
 spec:
   channel: alpha
   installPlanApproval: Automatic
