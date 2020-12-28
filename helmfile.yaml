@@ -5,13 +5,5 @@ helmfiles:
 - path: helmfiles/nginx/helmfile.yaml
 - path: helmfiles/secret-infra/helmfile.yaml
 - path: helmfiles/tekton-pipelines/helmfile.yaml
-releases:
-#- chart: ./charts/olm
-#  name: olm
-#  namespace: operator-lifecycle-manager
-#- chart: ./charts/quay
-#  version: 1.0.0
-#  name: quay-operator
-#  namespace: jx
 templates: {}
 renderedvalues: {}
