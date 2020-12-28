@@ -8,6 +8,10 @@ metadata:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
   quay:
+    deploymentStrategy: Recreate
+    externalAccess:
+      type: Ingress
+      hostname: quay.dev.property.xyz
     imagePullSecretName: jenkins-docker-cfg
     registryBackends:
       - name: local
