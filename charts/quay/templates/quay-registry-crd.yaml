@@ -1,4 +1,4 @@
-apiVersion: quay.redhat.com/v1
-kind: QuayRegistry
-metadata:
-  name: jx-registry
+#apiVersion: quay.redhat.com/v1
+#kind: QuayRegistry
+#metadata:
+#  name: jx-registry
