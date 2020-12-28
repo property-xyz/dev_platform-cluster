@@ -7,7 +7,8 @@ metadata:
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
-  channel: stable
-  name: project-quay
+  name: quay-tng
+  channel: alpha
+  installPlanApproval: Automatic
   source: operatorhubio-catalog
   sourceNamespace: operator-lifecycle-manager
