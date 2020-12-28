@@ -12,6 +12,5 @@ releases:
 - chart: ./charts/quay
   version: 1.0.0
   name: quay-operator
-  namespace: jx
 templates: {}
 renderedvalues: {}
