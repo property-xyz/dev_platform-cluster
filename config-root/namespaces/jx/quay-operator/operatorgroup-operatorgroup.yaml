@@ -1,4 +1,4 @@
-# Source: quay-operator/templates/project-quay-operator.yaml
+# Source: quay-operator/templates/00_project-quay-operator.yaml
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
