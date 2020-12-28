@@ -1,0 +1,13 @@
+# Source: quay-operator/templates/nooba-operator.yaml
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: noobaa-operator
+  namespace: jx
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  channel: alpha
+  name: noobaa-operator
+  source: operatorhubio-catalog
+  sourceNamespace: operator-lifecycle-manager
