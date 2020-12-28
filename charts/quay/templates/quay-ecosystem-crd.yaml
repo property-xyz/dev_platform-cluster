@@ -5,3 +5,6 @@ metadata:
 spec:
   quay:
     imagePullSecretName: jenkins-docker-cfg
+    externalAccess:
+      type: Ingress
+      hostname: quay.dev.property.xyz
