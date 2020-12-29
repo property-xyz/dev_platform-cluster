@@ -5,7 +5,6 @@ metadata:
 spec:
   channel: alpha
   installPlanApproval: Automatic
-  name: quay-enterprise-tng
+  name:  quay-tng
   source: quay-operator
   sourceNamespace: operator-lifecycle-manager
-  startingCSV: quay-operator.v0.0.1
