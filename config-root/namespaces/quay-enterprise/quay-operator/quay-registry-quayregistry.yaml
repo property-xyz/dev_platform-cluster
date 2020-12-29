@@ -8,5 +8,11 @@ metadata:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
   components:
-    - kind: route
+    - kind: postgres
+      managed: false
+    - kind: redis
+      managed: false
+    - kind: clair
+      managed: false
+    - kind: objectstorage
       managed: false
