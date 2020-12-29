@@ -3,7 +3,7 @@ apiVersion: noobaa.io/v1alpha1
 kind: NooBaa
 metadata:
   name: noobaa
-  namespace: jx
+  namespace: quay-enterprise
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
