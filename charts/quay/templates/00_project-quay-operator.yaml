@@ -1,3 +1,11 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: quay-operator
+spec:
+  targetNamespaces:
+    - quay-enterprise
+---
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
