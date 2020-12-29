@@ -1,9 +1,9 @@
-# Source: quay-operator/templates/00_project-quay-operator.yaml
+# Source: olm/templates/0000_50_olm_18_quay_operator_catalogue.yaml
 apiVersion: operators.coreos.com/v1alpha1
 kind: CatalogSource
 metadata:
   name: quay-operator
-  namespace: jx
+  namespace: operator-lifecycle-manager
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
