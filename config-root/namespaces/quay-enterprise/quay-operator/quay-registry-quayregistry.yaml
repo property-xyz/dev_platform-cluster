@@ -6,3 +6,7 @@ metadata:
   namespace: quay-enterprise
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  components:
+    - kind: route
+      managed: false
