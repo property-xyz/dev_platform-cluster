@@ -6,4 +6,3 @@ spec:
   components:
     - kind: route
       managed: false
-
