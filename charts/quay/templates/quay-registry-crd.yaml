@@ -4,11 +4,5 @@ metadata:
   name: quay-registry
 spec:
   components:
-    - kind: postgres
-      managed: false
-    - kind: redis
-      managed: false
-    - kind: clair
-      managed: false
-    - kind: objectstorage
+    - kind: routeX
       managed: false
