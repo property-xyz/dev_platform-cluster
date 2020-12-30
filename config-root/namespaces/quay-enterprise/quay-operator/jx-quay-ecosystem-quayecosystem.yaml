@@ -21,7 +21,9 @@ spec:
         path: /health/instance
         port: 8443
         scheme: HTTPS
-    externalAccessType: LoadBalancer
+    externalAccess:
+      type: LoadBalancer
+      hostname: quay.dev.property.xyz
     registryBackends:
       - name: local
         local:
