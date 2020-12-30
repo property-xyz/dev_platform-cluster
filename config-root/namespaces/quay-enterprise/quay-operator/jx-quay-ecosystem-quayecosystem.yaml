@@ -22,7 +22,7 @@ spec:
         port: 8443
         scheme: HTTPS
     externalAccess:
-      type: LoadBalancer
+      type: Ingress
       hostname: quay.dev.property.xyz
     registryBackends:
       - name: local
