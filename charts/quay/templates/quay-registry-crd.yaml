@@ -17,7 +17,6 @@ spec:
         path: /health/instance
         port: 8443
         scheme: HTTPS
-    externalAccessType: LoadBalancer
     registryBackends:
       - name: local
         local:
