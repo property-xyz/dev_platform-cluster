@@ -16,6 +16,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - property-xyz-bot/jx3-test-me
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - property-xyz-bot/test-jx3-angular
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -48,6 +52,22 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      property-xyz-bot/jx3-test-me:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       property-xyz-bot/test-jx3-angular:
       - approve
       - assign
@@ -162,6 +182,9 @@ data:
       trusted_org: todo
     - repos:
       - property-xyz/stage_platform-cluster
+      trusted_org: todo
+    - repos:
+      - property-xyz-bot/jx3-test-me
       trusted_org: todo
     - repos:
       - property-xyz-bot/test-jx3-angular
