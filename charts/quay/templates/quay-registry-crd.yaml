@@ -24,4 +24,3 @@ spec:
       - name: local
         local:
           storagePath: /opt/quayregistry
-   sslCertificatesSecretName: tls-dev-property-xyz-p
