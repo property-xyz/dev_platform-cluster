@@ -2,14 +2,12 @@
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
 metadata:
-  name: quay-operator-tng
+  name: quay-registry
   namespace: quay-enterprise
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
-  channel: alpha
-  installPlanApproval: Automatic
-  name: quay-tng
-  source: quay-operator
-  sourceNamespace: openshift-marketplace
-  startingCSV: quay-operator.v0.0.1
+  channel: stable
+  name: project-quay
+  source: operatorhubio-catalog
+  sourceNamespace: operator-lifecycle-manager
