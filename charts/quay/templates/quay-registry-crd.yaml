@@ -18,7 +18,7 @@ spec:
         port: 8443
         scheme: HTTPS
     externalAccess:
-      type: Ingress
+      type: ClusterIP
       hostname: quay.dev.property.xyz
     registryBackends:
       - name: local
