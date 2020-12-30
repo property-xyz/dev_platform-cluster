@@ -18,9 +18,10 @@ spec:
         port: 8443
         scheme: HTTPS
     externalAccess:
-      type: ClusterIP
+      type: LoadBalancer
       hostname: quay.dev.property.xyz
     registryBackends:
       - name: local
         local:
           storagePath: /opt/quayregistry
+   sslCertificatesSecretName: tls-dev-property-xyz-p

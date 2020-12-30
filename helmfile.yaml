@@ -5,7 +5,13 @@ helmfiles:
 - path: helmfiles/nginx/helmfile.yaml
 - path: helmfiles/secret-infra/helmfile.yaml
 - path: helmfiles/tekton-pipelines/helmfile.yaml
+repositories:
+  - url: https://charts.appscode.com/stable/
+    name: appscode
 releases:
+- chart: appscode/kubed
+  name: kubed
+  version: 0.12.0
 - chart: ./charts/olm
   name: olm
   namespace: operator-lifecycle-manager
