@@ -24,6 +24,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - property-xyz/jx3-delete-me
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - property-xyz/prod_platform-cluster
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -86,6 +90,22 @@ data:
       - pony
       property-xyz/dev_platform-cluster:
       - config-updater
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      property-xyz/jx3-delete-me:
       - approve
       - assign
       - blunderbuss
@@ -188,6 +208,9 @@ data:
       trusted_org: todo
     - repos:
       - property-xyz-bot/test-jx3-angular
+      trusted_org: todo
+    - repos:
+      - property-xyz/jx3-delete-me
       trusted_org: todo
     - repos:
       - property-xyz/prod_platform-cluster

@@ -10,6 +10,7 @@ data:
         property-xyz-bot/jx3-test-me: true
         property-xyz-bot/test-jx3-angular: true
         property-xyz/dev_platform-cluster: true
+        property-xyz/jx3-delete-me: true
         property-xyz/prod_platform-cluster: true
         property-xyz/stage_platform-cluster: true
         property-xyz/tes-jx3-boot: true
@@ -28,6 +29,7 @@ data:
         property-xyz-bot/jx3-test-me: merge
         property-xyz-bot/test-jx3-angular: merge
         property-xyz/dev_platform-cluster: merge
+        property-xyz/jx3-delete-me: merge
         property-xyz/prod_platform-cluster: merge
         property-xyz/stage_platform-cluster: merge
         property-xyz/tes-jx3-boot: merge
@@ -47,6 +49,7 @@ data:
         - property-xyz/stage_platform-cluster
         - property-xyz-bot/jx3-test-me
         - property-xyz-bot/test-jx3-angular
+        - property-xyz/jx3-delete-me
         - property-xyz/tes-jx3-boot
         - property-xyz/test-jx3-spring
       - labels:
@@ -63,6 +66,7 @@ data:
         - property-xyz/stage_platform-cluster
         - property-xyz-bot/jx3-test-me
         - property-xyz-bot/test-jx3-angular
+        - property-xyz/jx3-delete-me
         - property-xyz/tes-jx3-boot
         - property-xyz/test-jx3-spring
       target_url: http://dashboard.dev.property.xyz
