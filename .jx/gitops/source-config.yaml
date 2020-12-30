@@ -17,5 +17,6 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
+    - name: jx3-test-me
     - name: test-jx3-angular
     scheduler: in-repo
