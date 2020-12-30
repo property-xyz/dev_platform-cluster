@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        property-xyz-bot/jx3-test-me: true
         property-xyz-bot/test-jx3-angular: true
         property-xyz/dev_platform-cluster: true
         property-xyz/prod_platform-cluster: true
@@ -24,6 +25,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        property-xyz-bot/jx3-test-me: merge
         property-xyz-bot/test-jx3-angular: merge
         property-xyz/dev_platform-cluster: merge
         property-xyz/prod_platform-cluster: merge
@@ -43,6 +45,7 @@ data:
         - property-xyz/dev_platform-cluster
         - property-xyz/prod_platform-cluster
         - property-xyz/stage_platform-cluster
+        - property-xyz-bot/jx3-test-me
         - property-xyz-bot/test-jx3-angular
         - property-xyz/tes-jx3-boot
         - property-xyz/test-jx3-spring
@@ -58,6 +61,7 @@ data:
         - property-xyz/dev_platform-cluster
         - property-xyz/prod_platform-cluster
         - property-xyz/stage_platform-cluster
+        - property-xyz-bot/jx3-test-me
         - property-xyz-bot/test-jx3-angular
         - property-xyz/tes-jx3-boot
         - property-xyz/test-jx3-spring
