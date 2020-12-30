@@ -11,7 +11,6 @@ spec:
     deploymentStrategy: Recreate
     externalAccess:
       type: Ingress
-      hostname: quay.dev.property.xyz
     registryBackends:
       - name: local
         local:
