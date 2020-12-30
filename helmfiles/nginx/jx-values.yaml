@@ -29,7 +29,7 @@ jxRequirements:
     project: "794657423961"
     provider: eks
     region: eu-west-2
-    registry: ecr.io
+    registry: 794657423961.dkr.ecr.eu-west-2.amazonaws.com
   environments:
   - key: dev
     owner: property-xyz
