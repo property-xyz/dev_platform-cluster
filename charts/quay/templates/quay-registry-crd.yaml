@@ -5,8 +5,19 @@ metadata:
 spec:
   quay:
     deploymentStrategy: Recreate
-    externalAccess:
-      type: Ingress
+    livenessProbe:
+      initialDelaySeconds: 120
+      httpGet:
+        path: /health/instance
+        port: 8443
+        scheme: HTTPS
+    readinessProbe:
+      initialDelaySeconds: 10
+      httpGet:
+        path: /health/instance
+        port: 8443
+        scheme: HTTPS
+    externalAccessType: LoadBalancer
     registryBackends:
       - name: local
         local:
