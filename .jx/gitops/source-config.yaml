@@ -10,6 +10,7 @@ spec:
     repositories:
     - name: jx3-delete-me
     - name: platform-backend
+    - name: platform-backend_api
     - name: platform-postcodes-db
     - name: platform_backend
     - name: platform_backend-api
