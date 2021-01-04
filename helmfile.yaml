@@ -9,16 +9,8 @@ repositories:
 - name: appscode
   url: https://charts.appscode.com/stable/
 releases:
-- chart: appscode/kubed
-  version: 0.12.0
-  name: kubed
-  namespace: jx
 - chart: ./charts/olm
   name: olm
   namespace: operator-lifecycle-manager
-- chart: ./charts/quay
-  version: 1.0.0
-  name: quay-operator
-  namespace: quay-enterprise
 templates: {}
 renderedvalues: {}
