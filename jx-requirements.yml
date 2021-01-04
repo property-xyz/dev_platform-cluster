@@ -33,7 +33,7 @@ spec:
     gitServer: https://github.com
     key: production
     owner: property-xyz
-    promotionStrategy: Auto
+    promotionStrategy: Manual
     remoteCluster: true
     repository: prod_platform-cluster
   ingress:
