@@ -21,7 +21,8 @@ jxRequirements:
     chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
     clusterName: jx-dev
     devEnvApprovers:
-    - todo
+    - dicolasi
+    - kannan1
     environmentGitOwner: todo
     gitKind: github
     gitName: github

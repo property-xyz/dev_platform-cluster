@@ -126,6 +126,12 @@ data:
     - repos:
       - property-xyz/platform-postcodes-db
       trusted_org: todo
+    - repos:
+      - property-xyz/prod_platform-cluster
+      trusted_org: todo
+    - repos:
+      - property-xyz/stage_platform-cluster
+      trusted_org: todo
     welcome:
     - message_template: Welcome
 kind: ConfigMap
