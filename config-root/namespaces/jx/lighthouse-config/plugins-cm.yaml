@@ -16,18 +16,6 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
-      - property-xyz-bot/jx3-test-me
-      require_self_approval: true
-    - lgtm_acts_as_approve: true
-      repos:
-      - property-xyz-bot/test-jx3-angular
-      require_self_approval: true
-    - lgtm_acts_as_approve: true
-      repos:
-      - property-xyz/jx3-delete-me
-      require_self_approval: true
-    - lgtm_acts_as_approve: true
-      repos:
       - property-xyz/platform-postcodes-db
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -37,14 +25,6 @@ data:
     - lgtm_acts_as_approve: true
       repos:
       - property-xyz/stage_platform-cluster
-      require_self_approval: true
-    - lgtm_acts_as_approve: true
-      repos:
-      - property-xyz/tes-jx3-boot
-      require_self_approval: true
-    - lgtm_acts_as_approve: true
-      repos:
-      - property-xyz/test-jx3-spring
       require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
@@ -60,56 +40,8 @@ data:
       additional_labels: null
     owners: {}
     plugins:
-      property-xyz-bot/jx3-test-me:
-      - approve
-      - assign
-      - blunderbuss
-      - help
-      - hold
-      - lgtm
-      - lifecycle
-      - override
-      - size
-      - trigger
-      - wip
-      - heart
-      - cat
-      - dog
-      - pony
-      property-xyz-bot/test-jx3-angular:
-      - approve
-      - assign
-      - blunderbuss
-      - help
-      - hold
-      - lgtm
-      - lifecycle
-      - override
-      - size
-      - trigger
-      - wip
-      - heart
-      - cat
-      - dog
-      - pony
       property-xyz/dev_platform-cluster:
       - config-updater
-      - approve
-      - assign
-      - blunderbuss
-      - help
-      - hold
-      - lgtm
-      - lifecycle
-      - override
-      - size
-      - trigger
-      - wip
-      - heart
-      - cat
-      - dog
-      - pony
-      property-xyz/jx3-delete-me:
       - approve
       - assign
       - blunderbuss
@@ -173,38 +105,6 @@ data:
       - cat
       - dog
       - pony
-      property-xyz/tes-jx3-boot:
-      - approve
-      - assign
-      - blunderbuss
-      - help
-      - hold
-      - lgtm
-      - lifecycle
-      - override
-      - size
-      - trigger
-      - wip
-      - heart
-      - cat
-      - dog
-      - pony
-      property-xyz/test-jx3-spring:
-      - approve
-      - assign
-      - blunderbuss
-      - help
-      - hold
-      - lgtm
-      - lifecycle
-      - override
-      - size
-      - trigger
-      - wip
-      - heart
-      - cat
-      - dog
-      - pony
     requiresig: {}
     sigmention: {}
     size:
@@ -224,28 +124,7 @@ data:
       - property-xyz/stage_platform-cluster
       trusted_org: todo
     - repos:
-      - property-xyz-bot/jx3-test-me
-      trusted_org: todo
-    - repos:
-      - property-xyz-bot/test-jx3-angular
-      trusted_org: todo
-    - repos:
-      - property-xyz/jx3-delete-me
-      trusted_org: todo
-    - repos:
       - property-xyz/platform-postcodes-db
-      trusted_org: todo
-    - repos:
-      - property-xyz/prod_platform-cluster
-      trusted_org: todo
-    - repos:
-      - property-xyz/stage_platform-cluster
-      trusted_org: todo
-    - repos:
-      - property-xyz/tes-jx3-boot
-      trusted_org: todo
-    - repos:
-      - property-xyz/test-jx3-spring
       trusted_org: todo
     welcome:
     - message_template: Welcome

@@ -7,15 +7,10 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
-        property-xyz-bot/jx3-test-me: true
-        property-xyz-bot/test-jx3-angular: true
         property-xyz/dev_platform-cluster: true
-        property-xyz/jx3-delete-me: true
         property-xyz/platform-postcodes-db: true
         property-xyz/prod_platform-cluster: true
         property-xyz/stage_platform-cluster: true
-        property-xyz/tes-jx3-boot: true
-        property-xyz/test-jx3-spring: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -27,15 +22,10 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
-        property-xyz-bot/jx3-test-me: merge
-        property-xyz-bot/test-jx3-angular: merge
         property-xyz/dev_platform-cluster: merge
-        property-xyz/jx3-delete-me: merge
         property-xyz/platform-postcodes-db: merge
         property-xyz/prod_platform-cluster: merge
         property-xyz/stage_platform-cluster: merge
-        property-xyz/tes-jx3-boot: merge
-        property-xyz/test-jx3-spring: merge
       queries:
       - labels:
         - approved
@@ -49,12 +39,7 @@ data:
         - property-xyz/dev_platform-cluster
         - property-xyz/prod_platform-cluster
         - property-xyz/stage_platform-cluster
-        - property-xyz-bot/jx3-test-me
-        - property-xyz-bot/test-jx3-angular
-        - property-xyz/jx3-delete-me
         - property-xyz/platform-postcodes-db
-        - property-xyz/tes-jx3-boot
-        - property-xyz/test-jx3-spring
       - labels:
         - updatebot
         missingLabels:
@@ -67,12 +52,7 @@ data:
         - property-xyz/dev_platform-cluster
         - property-xyz/prod_platform-cluster
         - property-xyz/stage_platform-cluster
-        - property-xyz-bot/jx3-test-me
-        - property-xyz-bot/test-jx3-angular
-        - property-xyz/jx3-delete-me
         - property-xyz/platform-postcodes-db
-        - property-xyz/tes-jx3-boot
-        - property-xyz/test-jx3-spring
       target_url: http://dashboard.dev.property.xyz
 kind: ConfigMap
 metadata:
