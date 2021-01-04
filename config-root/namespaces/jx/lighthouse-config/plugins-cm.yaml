@@ -32,7 +32,7 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
-      - property-xyz/platform-backend
+      - property-xyz/platform_backend
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
@@ -133,7 +133,7 @@ data:
       - cat
       - dog
       - pony
-      property-xyz/platform-backend:
+      property-xyz/platform-postcodes-db:
       - approve
       - assign
       - blunderbuss
@@ -149,7 +149,7 @@ data:
       - cat
       - dog
       - pony
-      property-xyz/platform-postcodes-db:
+      property-xyz/platform_backend:
       - approve
       - assign
       - blunderbuss
@@ -276,7 +276,7 @@ data:
       - property-xyz/platform_backend-api
       trusted_org: todo
     - repos:
-      - property-xyz/platform-backend
+      - property-xyz/platform_backend
       trusted_org: todo
     - repos:
       - property-xyz/platform-postcodes-db
