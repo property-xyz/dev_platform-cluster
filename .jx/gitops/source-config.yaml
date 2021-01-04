@@ -11,6 +11,7 @@ spec:
     - name: jx3-delete-me
     - name: platform-backend
     - name: platform-postcodes-db
+    - name: platform_backend
     - name: platform_backend-api
     - name: prod_platform-cluster
     - name: stage_platform-cluster
