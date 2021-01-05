@@ -12,5 +12,8 @@ releases:
 - chart: ./charts/olm
   name: olm
   namespace: operator-lifecycle-manager
+- chart: ./charts/npmr
+  name: npmrc
+  namespace: jx
 templates: {}
 renderedvalues: {}
