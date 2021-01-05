@@ -28,7 +28,7 @@ env:
 
 image:
   repository: gcr.io/jenkinsxio/lighthouse
-  
+
 vault:
 {{- if eq .Values.jxRequirements.secretStorage "vault" }}
   enabled: true
