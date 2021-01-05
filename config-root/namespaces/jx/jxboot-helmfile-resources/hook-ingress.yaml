@@ -15,7 +15,6 @@ spec:
           - backend:
               serviceName: hook
               servicePort: 80
-            path: "/"
       host: hook.dev.property.xyz
   tls:
     - hosts:

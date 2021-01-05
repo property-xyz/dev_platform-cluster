@@ -56,7 +56,6 @@ spec:
   # Specify existing secret contains TLS certificate (accepted secret type: kubernetes.io/tls)
   # If it is set, generating certificate will be disabled
   # existingTlsSecretName: selfsigned-cert-tls
-
   # Request an Ingress controller with the default configuration
   ingress:
     # Specify Ingress object annotations here, if TLS is enabled (which is by default)
