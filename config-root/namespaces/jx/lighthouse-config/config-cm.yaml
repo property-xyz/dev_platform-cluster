@@ -9,6 +9,7 @@ data:
       enabled:
         property-xyz/dev_platform-cluster: true
         property-xyz/platform-backend: true
+        property-xyz/platform-frontend: true
         property-xyz/platform-postcodes-db: true
         property-xyz/prod_platform-cluster: true
         property-xyz/stage_platform-cluster: true
@@ -25,6 +26,7 @@ data:
       merge_method:
         property-xyz/dev_platform-cluster: merge
         property-xyz/platform-backend: merge
+        property-xyz/platform-frontend: merge
         property-xyz/platform-postcodes-db: merge
         property-xyz/prod_platform-cluster: merge
         property-xyz/stage_platform-cluster: merge
@@ -42,6 +44,7 @@ data:
         - property-xyz/prod_platform-cluster
         - property-xyz/stage_platform-cluster
         - property-xyz/platform-backend
+        - property-xyz/platform-frontend
         - property-xyz/platform-postcodes-db
       - labels:
         - updatebot
@@ -56,6 +59,7 @@ data:
         - property-xyz/prod_platform-cluster
         - property-xyz/stage_platform-cluster
         - property-xyz/platform-backend
+        - property-xyz/platform-frontend
         - property-xyz/platform-postcodes-db
       target_url: http://dashboard.dev.property.xyz
 kind: ConfigMap
