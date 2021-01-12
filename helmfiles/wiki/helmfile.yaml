@@ -5,12 +5,12 @@ environments:
       - jx-values.yaml
 namespace: wiki
 repositories:
-  - name: nicholaswilde
-    url: https://nicholaswilde.github.io/helm-charts/
+  - name: wener
+    url: https://charts.wener.tech/
 releases:
-  - chart: nicholaswilde/wikijs
+  - chart: wener/wiki
     name: wikijs
-    version: 0.1.0
+    version: 2.1.0
     values:
       - jx-values.yaml
       - ../../values/wiki/values.yaml.gotmpl
