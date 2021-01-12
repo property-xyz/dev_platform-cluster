@@ -5,11 +5,13 @@ ingress:
   enabled: true
   hosts:
     - host: wiki.{{ .Values.jxRequirements.ingress.domain }}
-      paths: /
+      paths: ["/"]
   tls:
      - secretName: tls-dev-property-xyz-p
        hosts:
          -  wiki.{{ .Values.jxRequirements.ingress.domain }}
+
+
 
 
 
