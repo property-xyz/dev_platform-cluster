@@ -40,9 +40,9 @@ spec:
             - name: DB_PORT
               value: "5432"
             - name: DB_NAME
-              value: wikijs
+              value: wiki
             - name: DB_USER
-              value: wikiXyz
+              value: postgres
             - name: DB_PASS
               valueFrom:
                 secretKeyRef:

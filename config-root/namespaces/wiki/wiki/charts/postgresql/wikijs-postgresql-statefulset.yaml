@@ -81,7 +81,7 @@ spec:
                   name: wikijs-postgresql
                   key: postgresql-password
             - name: POSTGRES_DB
-              value: "wikijs"
+              value: "wiki"
           ports:
             - name: postgresql
               containerPort: 5432
@@ -90,7 +90,7 @@ spec:
               command:
                 - sh
                 - -c
-                - exec pg_isready -U "postgres" -d "wikijs" -h 127.0.0.1 -p 5432
+                - exec pg_isready -U "postgres" -d "wiki" -h 127.0.0.1 -p 5432
             initialDelaySeconds: 30
             periodSeconds: 10
             timeoutSeconds: 5
@@ -103,7 +103,7 @@ spec:
                 - -c
                 - -e
                 - |
-                  pg_isready -U "postgres" -d "wikijs" -h 127.0.0.1 -p 5432
+                  pg_isready -U "postgres" -d "wiki" -h 127.0.0.1 -p 5432
                   [ -f /opt/bitnami/postgresql/tmp/.initialized ]
             initialDelaySeconds: 5
             periodSeconds: 10
