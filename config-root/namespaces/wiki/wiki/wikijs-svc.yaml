@@ -1,0 +1,27 @@
+# Source: wiki/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: wikijs
+  labels:
+    helm.sh/chart: wiki-2.1.0
+    app.kubernetes.io/name: wiki
+    app.kubernetes.io/instance: wikijs
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: wiki
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: http
+      protocol: TCP
+      name: http
+    - port: 443
+      targetPort: http
+      protocol: TCP
+      name: https
+  selector:
+    app.kubernetes.io/name: wiki
+    app.kubernetes.io/instance: wikijs
