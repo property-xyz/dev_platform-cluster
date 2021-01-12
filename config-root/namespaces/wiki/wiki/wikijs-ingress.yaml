@@ -1,0 +1,26 @@
+# Source: wiki/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: wikijs
+  labels:
+    helm.sh/chart: wiki-2.1.0
+    app.kubernetes.io/name: wiki
+    app.kubernetes.io/instance: wikijs
+    app.kubernetes.io/version: "latest"
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: wiki
+spec:
+  tls:
+    - hosts:
+        - "wiki.dev.property.xyz"
+      secretName: tls-dev-property-xyz-p
+  rules:
+    - host: "wiki.dev.property.xyz"
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: wikijs
+              servicePort: 80
