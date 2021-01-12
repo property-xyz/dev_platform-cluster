@@ -2,17 +2,17 @@ filepath: ""
 environments:
   default:
     values:
-      - jx-values.yaml
+    - jx-values.yaml
 namespace: wiki
 repositories:
-  - name: wener
-    url: https://charts.wener.tech/
+- name: wener
+  url: https://charts.wener.tech/
 releases:
-  - chart: wener/wiki
-    name: wikijs
-    version: 2.1.0
-    values:
-      - jx-values.yaml
-      - ../../values/wiki/values.yaml.gotmpl
+- chart: wener/wiki
+  version: 2.1.0
+  name: wikijs
+  values:
+  - jx-values.yaml
+  - ../../values/wiki/values.yaml.gotmpl
 templates: {}
 renderedvalues: {}

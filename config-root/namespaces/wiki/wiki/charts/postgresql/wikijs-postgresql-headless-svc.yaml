@@ -1,0 +1,22 @@
+# Source: wiki/charts/postgresql/templates/svc-headless.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: wikijs-postgresql-headless
+  labels:
+    app: postgresql
+    chart: postgresql-6.5.0
+    release: "wikijs"
+    heritage: "Helm"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: wiki
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+    - name: postgresql
+      port: 5432
+      targetPort: postgresql
+  selector:
+    app: postgresql
+    release: "wikijs"
