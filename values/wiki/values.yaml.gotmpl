@@ -1,0 +1,25 @@
+env:
+  TZ: "Europe/London"
+
+ingress:
+  enabled: true
+  hosts:
+    - host: wiki.{{ .Values.jxRequirements.ingress.domain }}
+  tls:
+     - secretName: tls-dev-property-xyz-p
+       hosts:
+         -  wiki.{{ .Values.jxRequirements.ingress.domain }}
+
+resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+
+persistence:
+  config:
+    enabled: true
+data:
+  enabled: true

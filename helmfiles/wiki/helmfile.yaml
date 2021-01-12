@@ -1,0 +1,18 @@
+filepath: ""
+environments:
+  default:
+    values:
+      - jx-values.yaml
+namespace: wiki
+repositories:
+  - name: nicholaswilde
+    url: https://nicholaswilde.github.io/helm-charts/
+releases:
+  - chart: nicholaswilde/wikijs
+    name: wikijs
+    version: 0.1.0
+    values:
+      - jx-values.yaml
+      - ../../values/wiki/values.yaml.gotmpl
+templates: {}
+renderedvalues: {}
