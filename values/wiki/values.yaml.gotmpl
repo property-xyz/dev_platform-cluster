@@ -5,20 +5,11 @@ ingress:
   enabled: true
   hosts:
     - host: wiki.{{ .Values.jxRequirements.ingress.domain }}
-      paths: ["/"]
+      paths: /
   tls:
      - secretName: tls-dev-property-xyz-p
        hosts:
          -  wiki.{{ .Values.jxRequirements.ingress.domain }}
-
-resources:
-    limits:
-      cpu: 100m
-      memory: 128Mi
-    requests:
-      cpu: 100m
-      memory: 128Mi
-
 
 
 
