@@ -36,6 +36,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - property-xyz/quarkus-mail-sender
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - property-xyz/stage_platform-cluster
       require_self_approval: true
     cat: {}
@@ -149,6 +153,22 @@ data:
       - cat
       - dog
       - pony
+      property-xyz/quarkus-mail-sender:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       property-xyz/stage_platform-cluster:
       - approve
       - assign
@@ -197,6 +217,9 @@ data:
       trusted_org: todo
     - repos:
       - property-xyz/prod_platform-cluster
+      trusted_org: todo
+    - repos:
+      - property-xyz/quarkus-mail-sender
       trusted_org: todo
     - repos:
       - property-xyz/stage_platform-cluster
