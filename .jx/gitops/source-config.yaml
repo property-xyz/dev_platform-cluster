@@ -13,5 +13,6 @@ spec:
     - name: platform-frontend
     - name: platform-postcodes-db
     - name: prod_platform-cluster
+    - name: quarkus-mail-sender
     - name: stage_platform-cluster
     scheduler: in-repo
