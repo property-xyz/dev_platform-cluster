@@ -39,6 +39,7 @@ spec:
   ingress:
     domain: dev.property.xyz
     externalDNS: true
+    kind: ingress
     namespaceSubDomain: .
     tls:
       email: security@property.xyz
