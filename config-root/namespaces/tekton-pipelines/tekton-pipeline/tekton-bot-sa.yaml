@@ -25,5 +25,3 @@ metadata:
   annotations:
     eks.amazonaws.com/role-arn: arn:aws:iam::794657423961:role/jx-dev-tekton-bot
 secrets:
-  - name: tekton-git
-  - name: tekton-container-registry-auth

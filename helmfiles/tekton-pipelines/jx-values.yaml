@@ -52,6 +52,7 @@ jxRequirements:
   ingress:
     domain: dev.property.xyz
     externalDNS: true
+    kind: ingress
     namespaceSubDomain: .
     tls:
       email: security@property.xyz
@@ -85,5 +86,9 @@ jxRequirementsIngressExternalDNS:
   enabled: true
 jxRequirementsIngressTLS:
   enabled: true
+jxRequirementsKuberhealthy:
+  enabled: false
+jxRequirementsTLSCheck:
+  enabled: false
 jxRequirementsVault:
   enabled: true

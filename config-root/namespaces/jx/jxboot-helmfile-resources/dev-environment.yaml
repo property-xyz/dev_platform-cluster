@@ -25,7 +25,7 @@ spec:
       apiVersion: jenkins.io/v1
       kind: Scheduler
       name: jx-meta-pipeline
-    dockerRegistryOrg: "794657423961"
+    dockerRegistryOrg: ""
     envOrganisation: todo
     gitServer: https://github.com
     helmTemplate: true

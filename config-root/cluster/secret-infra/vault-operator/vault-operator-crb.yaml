@@ -4,7 +4,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: vault-operator
   labels:
-    helm.sh/chart: vault-operator-1.3.0
+    helm.sh/chart: vault-operator-1.10.0
     gitops.jenkins-x.io/pipeline: 'cluster'
 subjects:
   - kind: ServiceAccount

@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2021-01-03T15:41:42Z"
+  creationTimestamp: "2021-01-09T10:57:24Z"
   deletionTimestamp: null
-  name: 'vault-instance-1.0.5'
+  name: 'vault-instance-1.0.6'
   namespace: secret-infra
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -19,20 +19,23 @@ spec:
         name: jenkins-x-bot
       message: |
         chore: added variables
-      sha: 86bb7444b908e20668c902b5d10ba372c9ff2512
+      sha: c6d812a0b59bc1f5a1091da694131b48726c6997
     - author:
-        email: james.strachan@gmail.com
-        name: James Strachan
+        email: pat@patscott.io
+        name: Patrick Lee Scott
       branch: master
       committer:
-        email: noreply@github.com
-        name: GitHub
-      message: 'chore: fix release'
-      sha: 3197fc095da313d9c04c5eb461df6e62cda4f53e
+        email: pat@patscott.io
+        name: Patrick Lee Scott
+      message: |
+        fix: set version for bankVaults, and upgrade Vault
+
+        Signed-off-by: Patrick Lee Scott <pat@patscott.io>
+      sha: 09d1fc177acecf377dbddd0c15d0739f3040975d
   gitHttpUrl: https://github.com/jenkins-x-charts/vault-instance
   gitOwner: jenkins-x-charts
   gitRepository: vault-instance
   name: 'vault-instance'
-  releaseNotesURL: https://github.com/jenkins-x-charts/vault-instance/releases/tag/v1.0.5
-  version: v1.0.5
+  releaseNotesURL: https://github.com/jenkins-x-charts/vault-instance/releases/tag/v1.0.6
+  version: v1.0.6
 status: {}
