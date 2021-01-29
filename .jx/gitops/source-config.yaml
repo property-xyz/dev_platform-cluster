@@ -8,6 +8,7 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
+    - name: data-outcode-stats-service
     - name: platform-backend
     - name: platform-data-seed
     - name: platform-frontend
