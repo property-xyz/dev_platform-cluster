@@ -24,6 +24,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - property-xyz/platform-crm-integration
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - property-xyz/platform-data-seed
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -98,6 +102,22 @@ data:
       - dog
       - pony
       property-xyz/platform-backend:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      property-xyz/platform-crm-integration:
       - approve
       - assign
       - blunderbuss
@@ -248,6 +268,9 @@ data:
       trusted_org: todo
     - repos:
       - property-xyz/platform-backend
+      trusted_org: todo
+    - repos:
+      - property-xyz/platform-crm-integration
       trusted_org: todo
     - repos:
       - property-xyz/platform-data-seed

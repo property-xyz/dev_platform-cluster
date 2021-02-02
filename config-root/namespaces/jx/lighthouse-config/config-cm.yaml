@@ -10,6 +10,7 @@ data:
         property-xyz/data-outcode-stats-service: true
         property-xyz/dev_platform-cluster: true
         property-xyz/platform-backend: true
+        property-xyz/platform-crm-integration: true
         property-xyz/platform-data-seed: true
         property-xyz/platform-frontend: true
         property-xyz/platform-mail-sender: true
@@ -31,6 +32,7 @@ data:
         property-xyz/data-outcode-stats-service: merge
         property-xyz/dev_platform-cluster: merge
         property-xyz/platform-backend: merge
+        property-xyz/platform-crm-integration: merge
         property-xyz/platform-data-seed: merge
         property-xyz/platform-frontend: merge
         property-xyz/platform-mail-sender: merge
@@ -53,6 +55,7 @@ data:
         - property-xyz/stage_platform-cluster
         - property-xyz/data-outcode-stats-service
         - property-xyz/platform-backend
+        - property-xyz/platform-crm-integration
         - property-xyz/platform-data-seed
         - property-xyz/platform-frontend
         - property-xyz/platform-mail-sender
@@ -72,6 +75,7 @@ data:
         - property-xyz/stage_platform-cluster
         - property-xyz/data-outcode-stats-service
         - property-xyz/platform-backend
+        - property-xyz/platform-crm-integration
         - property-xyz/platform-data-seed
         - property-xyz/platform-frontend
         - property-xyz/platform-mail-sender
