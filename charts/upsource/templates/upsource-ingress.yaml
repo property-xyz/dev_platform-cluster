@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: upsource
+spec:
+  rules:
+  - host: upsource.{{ .Values.jxRequirements.ingress.domain }}
+    http:
+      paths:
+        - backend:
+            serviceName: upsource
+            servicePort: 8080
+          path: /
+  tls:
+  - hosts:
+    - upsource.{{ .Values.jxRequirements.ingress.domain }}
+{{- if and (hasKey .Values.jxRequirements.ingress.tls "secretName") (.Values.jxRequirements.ingress.tls.secretName) }}
+    secretName: "{{ .Values.jxRequirements.ingress.tls.secretName }}"
+{{- else if .Values.jxRequirements.ingress.tls.production }}
+    secretName: "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-p"
+{{- else }}
+    secretName: "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-s"
+{{- end }}
