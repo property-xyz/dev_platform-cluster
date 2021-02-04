@@ -43,7 +43,7 @@
 	    </tr>
     <tr>
 	      <td><a href='https://github.com/jenkins-x/jx-pipelines-visualizer' title='Web UI for Jenkins X, with a clear goal - visualize the pipelines - and their logs.'> <img src='' width='24px' height='24px'> jx-pipelines-visualizer </a></td>
-	      <td>1.0.3</td>
+	      <td>1.1.1</td>
 	      <td><a href='https://dashboard.dev.property.xyz'>view</a></td>
 	      <td><a href='https://github.com/jenkins-x/jx-pipelines-visualizer'>source</a></td>
 	    </tr>
@@ -138,6 +138,15 @@
 	      <td>2.1.0</td>
 	      <td></td>
 	      <td><a href='https://wiki.js.org'>source</a></td>
+	    </tr>
+    <tr>
+		      <td colspan='4'><h3>upsource</h3></td>
+		    </tr>
+	    <tr>
+	      <td><a href='' title=''> <img src='' width='24px' height='24px'> ../charts/upsource </a></td>
+	      <td></td>
+	      <td></td>
+	      <td></td>
 	    </tr>
 
   </tbody>

@@ -1,0 +1,17 @@
+# Source: upsource/templates/upsource-claim2-persistentvolumeclaim.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: upsource-claim2
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: upsource-claim2
+  namespace: upsource
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+status: {}

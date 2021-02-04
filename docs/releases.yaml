@@ -101,7 +101,7 @@
     resourcePath: config-root/namespaces/jx/jx-pipelines-visualizer
     sources:
     - https://github.com/jenkins-x/jx-pipelines-visualizer
-    version: 1.0.3
+    version: 1.1.1
   - apiVersion: v1
     description: |
       This chart installs the jx-preview CRD and garbagecollection job
@@ -312,3 +312,8 @@
     - https://github.com/Requarks/wiki
     type: application
     version: 2.1.0
+- namespace: upsource
+  path: helmfiles/upsource/helmfile.yaml
+  releases:
+  - name: ../charts/upsource
+    repositoryName: ..
