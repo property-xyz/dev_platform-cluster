@@ -4,7 +4,6 @@ metadata:
   annotations:
     kompose.cmd: kompose convert -c -v
     kompose.version: 1.21.0 (992df58d8)
-  creationTimestamp: null
   labels:
     io.kompose.service: upsource
   name: upsource
@@ -20,7 +19,6 @@ spec:
       annotations:
         kompose.cmd: kompose convert -c -v
         kompose.version: 1.21.0 (992df58d8)
-      creationTimestamp: null
       labels:
         io.kompose.service: upsource
     spec:
@@ -43,6 +41,8 @@ spec:
           name: logs
         - mountPath: /opt/upsource/backups
           name: backups
+        - mountPath: /opt/upsource/temp
+          name: temp
       restartPolicy: Always
       serviceAccountName: ""
       volumes:
@@ -58,4 +58,7 @@ spec:
       - name: backups
         persistentVolumeClaim:
           claimName: backups
+      - name: temp
+        persistentVolumeClaim:
+          claimName: temp
 status: {}
