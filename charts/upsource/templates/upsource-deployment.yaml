@@ -24,6 +24,9 @@ spec:
       labels:
         io.kompose.service: upsource
     spec:
+      securityContext:
+        runAsUser: 1001
+        fsGroup: 1001
       containers:
       - image: jetbrains/upsource:2020.1.1815
         imagePullPolicy: ""
