@@ -77,9 +77,9 @@ releases:
   - ../../versionStream/charts/jx3/acme-jx/values.yaml.gotmpl
   - jx-values.yaml
 - chart: appscode/kubed
-  name: kubed
   version: 0.12.0
+  name: kubed
   values:
-    - jx-values.yaml
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}
