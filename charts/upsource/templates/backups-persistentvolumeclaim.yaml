@@ -3,8 +3,8 @@ kind: PersistentVolumeClaim
 metadata:
   creationTimestamp: null
   labels:
-    io.kompose.service: upsource-claim1
-  name: upsource-claim1
+    io.kompose.service: backups
+  name: backups
 spec:
   accessModes:
   - ReadWriteOnce

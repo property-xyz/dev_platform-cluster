@@ -33,26 +33,26 @@ spec:
         resources: {}
         volumeMounts:
         - mountPath: /opt/upsource/data
-          name: upsource-claim0
+          name: data
         - mountPath: /opt/upsource/conf
-          name: upsource-claim1
+          name: conf
         - mountPath: /opt/upsource/logs
-          name: upsource-claim2
+          name: logs
         - mountPath: /opt/upsource/backups
-          name: upsource-claim3
+          name: backups
       restartPolicy: Always
       serviceAccountName: ""
       volumes:
-      - name: upsource-claim0
+      - name: data
         persistentVolumeClaim:
-          claimName: upsource-claim0
-      - name: upsource-claim1
+          claimName: data
+      - name: conf
         persistentVolumeClaim:
-          claimName: upsource-claim1
-      - name: upsource-claim2
+          claimName: conf
+      - name: logs
         persistentVolumeClaim:
-          claimName: upsource-claim2
-      - name: upsource-claim3
+          claimName: logs
+      - name: backups
         persistentVolumeClaim:
-          claimName: upsource-claim3
+          claimName: backups
 status: {}
