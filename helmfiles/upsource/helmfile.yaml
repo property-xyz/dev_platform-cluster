@@ -1,0 +1,13 @@
+filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
+namespace: upsource
+releases:
+- chart: ../../charts/upsource
+  name: upsource
+  values:
+  - jx-values.yaml
+templates: {}
+renderedvalues: {}
