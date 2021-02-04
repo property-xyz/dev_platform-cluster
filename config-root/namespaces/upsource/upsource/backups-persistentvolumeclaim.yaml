@@ -1,12 +1,12 @@
-# Source: upsource/templates/upsource-claim3-persistentvolumeclaim.yaml
+# Source: upsource/templates/backups-persistentvolumeclaim.yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   creationTimestamp: null
   labels:
-    io.kompose.service: upsource-claim3
+    io.kompose.service: backups
     gitops.jenkins-x.io/pipeline: 'namespaces'
-  name: upsource-claim3
+  name: backups
   namespace: upsource
 spec:
   accessModes:
