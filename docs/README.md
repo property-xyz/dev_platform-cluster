@@ -86,6 +86,12 @@
 	      <td></td>
 	    </tr>
     <tr>
+	      <td><a href='https://github.com/appscode/kubed' title='Kubed by AppsCode - Kubernetes daemon'> <img src='https://cdn.appscode.com/images/products/kubed/icons/android-icon-192x192.png' width='24px' height='24px'> kubed </a></td>
+	      <td>0.12.0</td>
+	      <td></td>
+	      <td><a href='https://github.com/appscode/kubed'>source</a></td>
+	    </tr>
+    <tr>
 		      <td colspan='4'><h3>nginx</h3></td>
 		    </tr>
 	    <tr>
