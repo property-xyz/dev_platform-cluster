@@ -327,8 +327,3 @@
     - https://github.com/Requarks/wiki
     type: application
     version: 2.1.0
-- namespace: upsource
-  path: helmfiles/upsource/helmfile.yaml
-  releases:
-  - name: ../charts/upsource
-    repositoryName: ..
