@@ -33,15 +33,15 @@ spec:
         - containerPort: 8080
         resources: {}
         volumeMounts:
-        - mountPath: /opt/upsource/data
+        - mountPath: /upsource/data
           name: data
-        - mountPath: /opt/upsource/conf
+        - mountPath: /upsource/conf
           name: conf
-        - mountPath: /opt/upsource/logs
+        - mountPath: /upsource/logs
           name: logs
-        - mountPath: /opt/upsource/backups
+        - mountPath: /upsource/backups
           name: backups
-        - mountPath: /opt/upsource/temp
+        - mountPath: /upsource/temp
           name: temp
       restartPolicy: Always
       serviceAccountName: ""
