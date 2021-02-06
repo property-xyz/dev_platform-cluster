@@ -28,6 +28,7 @@ releases:
   name: vault-instance
   values:
   - jx-values.yaml
+  - ../../versionStream/charts/jx3/vault-instance/values.yaml.gotmpl
 - chart: jx3/pusher-wave
   version: 0.4.12
   name: pusher-wave
