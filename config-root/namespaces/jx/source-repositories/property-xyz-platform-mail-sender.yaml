@@ -6,9 +6,7 @@ metadata:
     owner: property-xyz
     provider: github
     repository: platform-mail-sender
-    gitops.jenkins-x.io/pipeline: 'namespaces'
   name: property-xyz-platform-mail-sender
-  namespace: jx
 spec:
   httpCloneURL: https://github.com/property-xyz/platform-mail-sender.git
   org: property-xyz

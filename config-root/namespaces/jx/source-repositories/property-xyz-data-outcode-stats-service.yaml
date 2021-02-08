@@ -6,9 +6,7 @@ metadata:
     owner: property-xyz
     provider: github
     repository: data-outcode-stats-service
-    gitops.jenkins-x.io/pipeline: 'namespaces'
   name: property-xyz-data-outcode-stats-service
-  namespace: jx
 spec:
   httpCloneURL: https://github.com/property-xyz/data-outcode-stats-service.git
   org: property-xyz
