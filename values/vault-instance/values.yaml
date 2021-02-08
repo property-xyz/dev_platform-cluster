@@ -1,2 +1,3 @@
-ingress:
-  enable: false
+spec:
+  ingress:
+    enable: false
