@@ -116,6 +116,12 @@
 	      <td><a href='https://banzaicloud.com/products/bank-vaults/'>source</a></td>
 	    </tr>
     <tr>
+	      <td><a href='https://github.com/jenkins-x-charts/vault-instance' title='a chart for creating a Vault instance via the vault operator'> <img src='' width='24px' height='24px'> vault-instance </a></td>
+	      <td>1.0.15</td>
+	      <td></td>
+	      <td><a href='https://github.com/jenkins-x-charts/vault-instance'>source</a></td>
+	    </tr>
+    <tr>
 	      <td><a href='https://github.com/pusher/wave' title='wave chart that runs on kubernetes'> <img src='' width='24px' height='24px'> pusher-wave </a></td>
 	      <td>0.4.12</td>
 	      <td></td>
