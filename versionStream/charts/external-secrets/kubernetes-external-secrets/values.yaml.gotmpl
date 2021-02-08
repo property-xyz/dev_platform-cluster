@@ -14,8 +14,7 @@ replicaCount: 0
 
 {{- if eq .Values.jxRequirements.secretStorage "vault" }}
 env:
-  VAULT_ADDR: https://vault.jx-vault:8200
-  NODE_EXTRA_CA_CERTS: "/usr/local/share/ca-certificates/ca.crt"
+  VAULT_ADDR: http://vault.svc.jx.cluster.local:8200
 
 deploymentInitContainers:
   initContainers:
