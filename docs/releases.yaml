@@ -256,3 +256,8 @@
     repositoryUrl: https://cdfoundation.github.io/tekton-helm-chart
     resourcePath: config-root/namespaces/tekton-pipelines/tekton-pipeline
     version: 0.20.1
+- namespace: upsource
+  path: helmfiles/upsource/helmfile.yaml
+  releases:
+  - name: ../charts/upsource
+    repositoryName: ..

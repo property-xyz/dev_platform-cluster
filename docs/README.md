@@ -124,6 +124,15 @@
 	      <td></td>
 	      <td><a href='https://github.com/cdfoundation/tekton-helm-chart'>source</a></td>
 	    </tr>
+    <tr>
+		      <td colspan='4'><h3>upsource</h3></td>
+		    </tr>
+	    <tr>
+	      <td><a href='' title=''> <img src='' width='24px' height='24px'> ../charts/upsource </a></td>
+	      <td></td>
+	      <td></td>
+	      <td></td>
+	    </tr>
 
   </tbody>
 </table>
