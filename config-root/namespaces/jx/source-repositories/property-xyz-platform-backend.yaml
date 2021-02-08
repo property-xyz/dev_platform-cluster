@@ -6,7 +6,9 @@ metadata:
     owner: property-xyz
     provider: github
     repository: platform-backend
+    gitops.jenkins-x.io/pipeline: 'namespaces'
   name: property-xyz-platform-backend
+  namespace: jx
 spec:
   httpCloneURL: https://github.com/property-xyz/platform-backend.git
   org: property-xyz

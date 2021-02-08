@@ -6,7 +6,9 @@ metadata:
     owner: property-xyz
     provider: github
     repository: quarkus-mail-sender
+    gitops.jenkins-x.io/pipeline: 'namespaces'
   name: property-xyz-quarkus-mail-sender
+  namespace: jx
 spec:
   httpCloneURL: https://github.com/property-xyz/quarkus-mail-sender.git
   org: property-xyz

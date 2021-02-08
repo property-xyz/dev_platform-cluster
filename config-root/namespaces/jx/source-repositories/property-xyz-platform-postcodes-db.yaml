@@ -6,7 +6,9 @@ metadata:
     owner: property-xyz
     provider: github
     repository: platform-postcodes-db
+    gitops.jenkins-x.io/pipeline: 'namespaces'
   name: property-xyz-platform-postcodes-db
+  namespace: jx
 spec:
   httpCloneURL: https://github.com/property-xyz/platform-postcodes-db.git
   org: property-xyz

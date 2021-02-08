@@ -6,7 +6,9 @@ metadata:
     owner: property-xyz
     provider: github
     repository: platform-data-seed
+    gitops.jenkins-x.io/pipeline: 'namespaces'
   name: property-xyz-platform-data-seed
+  namespace: jx
 spec:
   httpCloneURL: https://github.com/property-xyz/platform-data-seed.git
   org: property-xyz
