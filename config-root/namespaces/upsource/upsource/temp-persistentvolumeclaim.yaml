@@ -1,0 +1,17 @@
+# Source: upsource/templates/temp-persistentvolumeclaim.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: temp
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: temp
+  namespace: upsource
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+status: {}
