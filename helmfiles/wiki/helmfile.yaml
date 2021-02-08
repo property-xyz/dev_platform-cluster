@@ -6,10 +6,10 @@ environments:
 namespace: wiki
 repositories:
 - name: wener
-  url: https://charts.wener.tech/
+  url: https://nicholaswilde.github.io/helm-charts/
 releases:
-- chart: wener/wiki
-  version: 2.1.0
+- chart: nicholaswilde/wiki
+  version: 0.1.4
   name: wikijs
   values:
   - jx-values.yaml
