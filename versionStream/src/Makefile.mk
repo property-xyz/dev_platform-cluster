@@ -2,7 +2,9 @@ FETCH_DIR := build/base
 TMP_TEMPLATE_DIR := build/tmp
 OUTPUT_DIR := config-root
 KUBEAPPLY ?= kubectl-apply
-VAULT_ADDR ?= https://vault.secret-infra:8200
+VAULT_ADDR ?= https://vault.jx-vault:8200
+VAULT_NAMESPACE ?= jx-vault
+VAULT_ROLE ?= jx-vault
 
 # You can disable force mode on kubectl apply by modifying this line:
 KUBECTL_APPLY_FLAGS ?= --force
