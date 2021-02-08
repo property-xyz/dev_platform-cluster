@@ -1,3 +1,0 @@
-gitUrl: https://chrismellard.github.io/kubernetes-external-secrets
-namespace: secret-infra
-version: 6.2.0
