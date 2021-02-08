@@ -6,7 +6,9 @@ metadata:
     owner: property-xyz
     provider: github
     repository: stage_platform-cluster
+    gitops.jenkins-x.io/pipeline: 'namespaces'
   name: property-xyz-stage-platform-cluster
+  namespace: jx
 spec:
   httpCloneURL: https://github.com/property-xyz/stage_platform-cluster.git
   org: property-xyz

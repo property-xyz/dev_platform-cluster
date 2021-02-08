@@ -6,7 +6,9 @@ metadata:
     owner: property-xyz
     provider: github
     repository: platform-crm-integration
+    gitops.jenkins-x.io/pipeline: 'namespaces'
   name: property-xyz-platform-crm-integration
+  namespace: jx
 spec:
   httpCloneURL: https://github.com/property-xyz/platform-crm-integration.git
   org: property-xyz

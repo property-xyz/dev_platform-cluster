@@ -6,7 +6,9 @@ metadata:
     owner: property-xyz
     provider: github
     repository: data_postcode-yields-service
+    gitops.jenkins-x.io/pipeline: 'namespaces'
   name: property-xyz-data-postcode-yields-service
+  namespace: jx
 spec:
   httpCloneURL: https://github.com/property-xyz/data_postcode-yields-service.git
   org: property-xyz

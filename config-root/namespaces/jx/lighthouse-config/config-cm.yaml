@@ -1,0 +1,95 @@
+apiVersion: v1
+data:
+  config.yaml: |
+    branch-protection:
+      protect-tested-repos: true
+    github:
+      LinkURL: null
+    in_repo_config:
+      enabled:
+        property-xyz/data-outcode-stats-service: true
+        property-xyz/data_postcode-yields-service: true
+        property-xyz/dev_platform-cluster: true
+        property-xyz/platform-backend: true
+        property-xyz/platform-crm-integration: true
+        property-xyz/platform-data-seed: true
+        property-xyz/platform-frontend: true
+        property-xyz/platform-mail-sender: true
+        property-xyz/platform-postcodes-db: true
+        property-xyz/prod_platform-cluster: true
+        property-xyz/quarkus-mail-sender: true
+        property-xyz/stage_platform-cluster: true
+    plank: {}
+    pod_namespace: jx
+    prowjob_namespace: jx
+    push_gateway:
+      serve_metrics: false
+    tide:
+      context_options:
+        from-branch-protection: true
+        required-if-present-contexts: null
+        skip-unknown-contexts: false
+      merge_method:
+        property-xyz/data-outcode-stats-service: merge
+        property-xyz/data_postcode-yields-service: merge
+        property-xyz/dev_platform-cluster: merge
+        property-xyz/platform-backend: merge
+        property-xyz/platform-crm-integration: merge
+        property-xyz/platform-data-seed: merge
+        property-xyz/platform-frontend: merge
+        property-xyz/platform-mail-sender: merge
+        property-xyz/platform-postcodes-db: merge
+        property-xyz/prod_platform-cluster: merge
+        property-xyz/quarkus-mail-sender: merge
+        property-xyz/stage_platform-cluster: merge
+      queries:
+      - labels:
+        - approved
+        missingLabels:
+        - do-not-merge
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-ok-to-test
+        - needs-rebase
+        repos:
+        - property-xyz/dev_platform-cluster
+        - property-xyz/prod_platform-cluster
+        - property-xyz/stage_platform-cluster
+        - property-xyz/data-outcode-stats-service
+        - property-xyz/data_postcode-yields-service
+        - property-xyz/platform-backend
+        - property-xyz/platform-crm-integration
+        - property-xyz/platform-data-seed
+        - property-xyz/platform-frontend
+        - property-xyz/platform-mail-sender
+        - property-xyz/platform-postcodes-db
+        - property-xyz/quarkus-mail-sender
+      - labels:
+        - updatebot
+        missingLabels:
+        - do-not-merge
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-ok-to-test
+        - needs-rebase
+        repos:
+        - property-xyz/dev_platform-cluster
+        - property-xyz/prod_platform-cluster
+        - property-xyz/stage_platform-cluster
+        - property-xyz/data-outcode-stats-service
+        - property-xyz/data_postcode-yields-service
+        - property-xyz/platform-backend
+        - property-xyz/platform-crm-integration
+        - property-xyz/platform-data-seed
+        - property-xyz/platform-frontend
+        - property-xyz/platform-mail-sender
+        - property-xyz/platform-postcodes-db
+        - property-xyz/quarkus-mail-sender
+      target_url: http://dashboard.dev.property.xyz
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: config
+  namespace: jx
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
