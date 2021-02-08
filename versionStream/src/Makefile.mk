@@ -160,9 +160,9 @@ secrets-populate:
 	-VAULT_ADDR=$(VAULT_ADDR) VAULT_NAMESPACE=$(VAULT_NAMESPACE) jx secret populate --secret-namespace $(VAULT_NAMESPACE)
 
 .PHONY: secrets-wait
-#secrets-wait:
-#	# lets wait for the ExternalSecrets service to populate the mandatory Secret resources
-#	VAULT_ADDR=$(VAULT_ADDR) jx secret wait -n jx
+secrets-wait:
+	# lets wait for the ExternalSecrets service to populate the mandatory Secret resources
+	VAULT_ADDR=$(VAULT_ADDR) jx secret wait -n jx
 
 .PHONY: git-setup
 git-setup:
