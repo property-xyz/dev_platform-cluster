@@ -14,7 +14,7 @@ replicaCount: 0
 
 {{- if eq .Values.jxRequirements.secretStorage "vault" }}
 env:
-  VAULT_ADDR: http://vault.jx.svc.cluster.local:8200
+  VAULT_ADDR: http://vault.jx-vault.svc.cluster.local:8200
 
 deploymentInitContainers:
   initContainers:
