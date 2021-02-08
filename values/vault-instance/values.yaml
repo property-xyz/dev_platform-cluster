@@ -1,3 +1,1 @@
-spec:
-  ingress:
-    enable: false
+spec.ingress.annotations: {}
