@@ -9,6 +9,7 @@ repositories:
   url: https://nicholaswilde.github.io/helm-charts/
 releases:
 - chart: nicholaswilde/wiki
+  version: 0.1.4
   name: wikijs
   values:
   - jx-values.yaml
