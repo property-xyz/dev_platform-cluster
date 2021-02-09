@@ -1,0 +1,49 @@
+# Source: vault-instance/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-02-01T09:07:17Z"
+  deletionTimestamp: null
+  name: 'vault-instance-1.0.15'
+  namespace: secret-infra
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: release 1.0.15
+      sha: c105edb766f4fc620e49df308695cb8277024d84
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: add variables
+      sha: 5963d020c1a6c808f4ee2b0a547158f5df59b0f3
+    - author:
+        email: chrism@datacom.co.nz
+        name: Chris Mellard
+      branch: master
+      committer:
+        email: chrism@datacom.co.nz
+        name: Chris Mellard
+      message: |
+        feat: added in additional values to set alternative auth namespaces for vault auth
+      sha: 55f7b6dd97cc29d5668887625c8640c847614429
+  gitHttpUrl: https://github.com/jenkins-x-charts/vault-instance
+  gitOwner: jenkins-x-charts
+  gitRepository: vault-instance
+  name: 'vault-instance'
+  releaseNotesURL: https://github.com/jenkins-x-charts/vault-instance/releases/tag/v1.0.15
+  version: v1.0.15
+status: {}
