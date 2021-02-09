@@ -10,6 +10,7 @@ spec:
     repositories:
     - name: data-outcode-stats-service
     - name: data_postcode-yields-service
+    - name: data_yield-stats-service
     - name: platform-backend
     - name: platform-crm-integration
     - name: platform-data-seed

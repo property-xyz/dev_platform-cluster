@@ -9,6 +9,7 @@ data:
       enabled:
         property-xyz/data-outcode-stats-service: true
         property-xyz/data_postcode-yields-service: true
+        property-xyz/data_yield-stats-service: true
         property-xyz/dev_platform-cluster: true
         property-xyz/platform-backend: true
         property-xyz/platform-crm-integration: true
@@ -32,6 +33,7 @@ data:
       merge_method:
         property-xyz/data-outcode-stats-service: merge
         property-xyz/data_postcode-yields-service: merge
+        property-xyz/data_yield-stats-service: merge
         property-xyz/dev_platform-cluster: merge
         property-xyz/platform-backend: merge
         property-xyz/platform-crm-integration: merge
@@ -57,6 +59,7 @@ data:
         - property-xyz/stage_platform-cluster
         - property-xyz/data-outcode-stats-service
         - property-xyz/data_postcode-yields-service
+        - property-xyz/data_yield-stats-service
         - property-xyz/platform-backend
         - property-xyz/platform-crm-integration
         - property-xyz/platform-data-seed
@@ -78,6 +81,7 @@ data:
         - property-xyz/stage_platform-cluster
         - property-xyz/data-outcode-stats-service
         - property-xyz/data_postcode-yields-service
+        - property-xyz/data_yield-stats-service
         - property-xyz/platform-backend
         - property-xyz/platform-crm-integration
         - property-xyz/platform-data-seed
