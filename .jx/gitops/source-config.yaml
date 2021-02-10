@@ -9,6 +9,7 @@ spec:
     providerKind: github
     repositories:
     - name: data-outcode-stats-service
+    - name: data-yields-stats-service
     - name: platform-backend
     - name: platform-crm-integration
     - name: platform-data-seed
