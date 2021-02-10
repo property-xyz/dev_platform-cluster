@@ -1,0 +1,8 @@
+# Source: olm/templates/0000_50_olm_00-namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: operators
+  labels:
+    gitops.jenkins-x.io/pipeline: 'cluster'
+    team: 'jx'
