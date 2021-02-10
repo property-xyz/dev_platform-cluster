@@ -9,5 +9,12 @@ helmfiles:
 repositories:
 - name: appscode
   url: https://charts.appscode.com/stable/
+releases:
+- chart: ./charts/olm
+  name: olm
+  namespace: operator-lifecycle-manager
+- chart: ./charts/npmr
+  name: npmrc
+  namespace: jx
 templates: {}
 renderedvalues: {}
