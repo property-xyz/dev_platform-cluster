@@ -20,7 +20,7 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
-      - property-xyz/data-yields-stats-service
+      - property-xyz/data-yield-stats-service
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
@@ -88,7 +88,7 @@ data:
       - cat
       - dog
       - pony
-      property-xyz/data-yields-stats-service:
+      property-xyz/data-yield-stats-service:
       - approve
       - assign
       - blunderbuss
@@ -287,7 +287,7 @@ data:
       - property-xyz/data-outcode-stats-service
       trusted_org: todo
     - repos:
-      - property-xyz/data-yields-stats-service
+      - property-xyz/data-yield-stats-service
       trusted_org: todo
     - repos:
       - property-xyz/platform-backend
