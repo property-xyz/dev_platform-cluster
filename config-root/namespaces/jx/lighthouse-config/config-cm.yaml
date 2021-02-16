@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        property-xyz/data-demand-stats-service: true
         property-xyz/data-growth-stats-service: true
         property-xyz/data-outcode-stats-service: true
         property-xyz/data-yield-stats-service: true
@@ -31,6 +32,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        property-xyz/data-demand-stats-service: merge
         property-xyz/data-growth-stats-service: merge
         property-xyz/data-outcode-stats-service: merge
         property-xyz/data-yield-stats-service: merge
@@ -57,6 +59,7 @@ data:
         - property-xyz/dev_platform-cluster
         - property-xyz/prod_platform-cluster
         - property-xyz/stage_platform-cluster
+        - property-xyz/data-demand-stats-service
         - property-xyz/data-growth-stats-service
         - property-xyz/data-outcode-stats-service
         - property-xyz/data-yield-stats-service
@@ -79,6 +82,7 @@ data:
         - property-xyz/dev_platform-cluster
         - property-xyz/prod_platform-cluster
         - property-xyz/stage_platform-cluster
+        - property-xyz/data-demand-stats-service
         - property-xyz/data-growth-stats-service
         - property-xyz/data-outcode-stats-service
         - property-xyz/data-yield-stats-service

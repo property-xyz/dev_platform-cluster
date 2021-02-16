@@ -16,6 +16,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - property-xyz/data-demand-stats-service
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - property-xyz/data-growth-stats-service
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -76,6 +80,22 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      property-xyz/data-demand-stats-service:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       property-xyz/data-growth-stats-service:
       - approve
       - assign
@@ -302,6 +322,9 @@ data:
       trusted_org: todo
     - repos:
       - property-xyz/stage_platform-cluster
+      trusted_org: todo
+    - repos:
+      - property-xyz/data-demand-stats-service
       trusted_org: todo
     - repos:
       - property-xyz/data-growth-stats-service
