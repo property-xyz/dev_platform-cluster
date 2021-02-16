@@ -8,6 +8,7 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
+    - name: data-growth-stats-service
     - name: data-outcode-stats-service
     - name: data-yield-stats-service
     - name: platform-backend
