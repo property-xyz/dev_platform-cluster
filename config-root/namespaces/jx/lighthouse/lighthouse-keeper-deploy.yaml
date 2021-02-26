@@ -4,14 +4,13 @@ kind: Deployment
 metadata:
   name: lighthouse-keeper
   labels:
-    draft: draft-app
-    chart: "lighthouse-0.0.923"
+    chart: "lighthouse-0.0.937"
     app: lighthouse-keeper
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx
   annotations:
     wave.pusher.com/update-on-config-change: 'true'
-    jenkins-x.io/hash: 'fc841d057e85380c9079176673c6c1ff8504efc570dec7a204e3ef94c7a63d83'
+    jenkins-x.io/hash: '4f48354fa9c26537106c4eaf31e288fb79dce7eb9064187a0b5f00bfc4878b8f'
 spec:
   replicas: 1
   strategy:
@@ -21,21 +20,19 @@ spec:
       maxUnavailable: 1
   selector:
     matchLabels:
-      draft: draft-app
       app: lighthouse-keeper
   template:
     metadata:
       annotations:
         ad.datadoghq.com/keeper.logs: '[{"source":"lighthouse","service":"keeper"}]'
       labels:
-        draft: draft-app
         app: lighthouse-keeper
     spec:
       serviceAccountName: lighthouse-keeper
       terminationGracePeriodSeconds: 30
       containers:
         - name: lighthouse-keeper
-          image: gcr.io/jenkinsxio/lighthouse-keeper:0.0.923
+          image: gcr.io/jenkinsxio/lighthouse-keeper:0.0.937
           imagePullPolicy: IfNotPresent
           args:
             - "--namespace=jx"

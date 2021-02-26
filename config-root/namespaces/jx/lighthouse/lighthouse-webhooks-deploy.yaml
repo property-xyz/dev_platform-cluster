@@ -4,31 +4,28 @@ kind: Deployment
 metadata:
   name: lighthouse-webhooks
   labels:
-    draft: draft-app
-    chart: "lighthouse-0.0.923"
+    chart: "lighthouse-0.0.937"
     app: lighthouse-webhooks
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
-    checksum/config: 77388a3ccbbfed93c295332762d51a090949748385e6d546c5f0c0450b5a78b2
+    checksum/config: 00833bd13a9669ae2af00837bc90c2c34bf403e31909b2595d7f5a06d8ecac05
     wave.pusher.com/update-on-config-change: 'true'
-    jenkins-x.io/hash: 'fc841d057e85380c9079176673c6c1ff8504efc570dec7a204e3ef94c7a63d83'
+    jenkins-x.io/hash: '4f48354fa9c26537106c4eaf31e288fb79dce7eb9064187a0b5f00bfc4878b8f'
   namespace: jx
 spec:
   replicas: 1
   selector:
     matchLabels:
-      draft: draft-app
       app: lighthouse-webhooks
   template:
     metadata:
       labels:
-        draft: draft-app
         app: lighthouse-webhooks
     spec:
       serviceAccountName: lighthouse-webhooks
       containers:
         - name: lighthouse-webhooks
-          image: gcr.io/jenkinsxio/lighthouse-webhooks:0.0.923
+          image: gcr.io/jenkinsxio/lighthouse-webhooks:0.0.937
           imagePullPolicy: IfNotPresent
           args:
             - "--namespace=jx"
@@ -51,6 +48,7 @@ spec:
                 secretKeyRef:
                   name: "lighthouse-hmac-token"
                   key: hmac
+                  optional: false
             - name: "JX_LOG_FORMAT"
               value: "json"
             - name: "LOGRUS_FORMAT"

@@ -28,6 +28,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - property-xyz/data-search-service
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - property-xyz/data-yield-stats-service
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -113,6 +117,22 @@ data:
       - dog
       - pony
       property-xyz/data-outcode-stats-service:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      property-xyz/data-search-service:
       - approve
       - assign
       - blunderbuss
@@ -331,6 +351,9 @@ data:
       trusted_org: todo
     - repos:
       - property-xyz/data-outcode-stats-service
+      trusted_org: todo
+    - repos:
+      - property-xyz/data-search-service
       trusted_org: todo
     - repos:
       - property-xyz/data-yield-stats-service
