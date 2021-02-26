@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: property-xyz
+    provider: github
+    repository: data-search-service
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: property-xyz-data-search-service
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/property-xyz/data-search-service.git
+  org: property-xyz
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: data-search-service
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/property-xyz/data-search-service

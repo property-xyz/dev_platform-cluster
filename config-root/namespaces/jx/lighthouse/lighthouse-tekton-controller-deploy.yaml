@@ -4,31 +4,28 @@ kind: Deployment
 metadata:
   name: lighthouse-tekton-controller
   labels:
-    draft: draft-app
-    chart: "lighthouse-0.0.923"
+    chart: "lighthouse-0.0.937"
     app: lighthouse-tekton-controller
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx
   annotations:
     wave.pusher.com/update-on-config-change: 'true'
-    jenkins-x.io/hash: 'fc841d057e85380c9079176673c6c1ff8504efc570dec7a204e3ef94c7a63d83'
+    jenkins-x.io/hash: '4f48354fa9c26537106c4eaf31e288fb79dce7eb9064187a0b5f00bfc4878b8f'
 spec:
   replicas: 1
   selector:
     matchLabels:
-      draft: draft-app
       app: lighthouse-tekton-controller
   template:
     metadata:
       labels:
-        draft: draft-app
         app: lighthouse-tekton-controller
       annotations: {}
     spec:
       serviceAccountName: lighthouse-tekton-controller
       containers:
         - name: lighthouse-tekton-controller
-          image: gcr.io/jenkinsxio/lighthouse-tekton-controller:0.0.923
+          image: gcr.io/jenkinsxio/lighthouse-tekton-controller:0.0.937
           imagePullPolicy: IfNotPresent
           args:
             - --namespace=jx

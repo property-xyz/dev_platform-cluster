@@ -10,6 +10,7 @@ data:
         property-xyz/data-demand-stats-service: true
         property-xyz/data-growth-stats-service: true
         property-xyz/data-outcode-stats-service: true
+        property-xyz/data-search-service: true
         property-xyz/data-yield-stats-service: true
         property-xyz/dev_platform-cluster: true
         property-xyz/platform-backend: true
@@ -35,6 +36,7 @@ data:
         property-xyz/data-demand-stats-service: merge
         property-xyz/data-growth-stats-service: merge
         property-xyz/data-outcode-stats-service: merge
+        property-xyz/data-search-service: merge
         property-xyz/data-yield-stats-service: merge
         property-xyz/dev_platform-cluster: merge
         property-xyz/platform-backend: merge
@@ -62,6 +64,7 @@ data:
         - property-xyz/data-demand-stats-service
         - property-xyz/data-growth-stats-service
         - property-xyz/data-outcode-stats-service
+        - property-xyz/data-search-service
         - property-xyz/data-yield-stats-service
         - property-xyz/platform-backend
         - property-xyz/platform-crm-integration
@@ -85,6 +88,7 @@ data:
         - property-xyz/data-demand-stats-service
         - property-xyz/data-growth-stats-service
         - property-xyz/data-outcode-stats-service
+        - property-xyz/data-search-service
         - property-xyz/data-yield-stats-service
         - property-xyz/platform-backend
         - property-xyz/platform-crm-integration
