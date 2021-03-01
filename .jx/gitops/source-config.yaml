@@ -11,7 +11,7 @@ spec:
     - name: data-demand-stats-service
     - name: data-growth-stats-service
     - name: data-outcode-stats-service
-    - name: data-search-service
+    - name: data-export-service
     - name: data-yield-stats-service
     - name: platform-backend
     - name: platform-crm-integration
